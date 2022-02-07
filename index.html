@@ -1,21 +1,687 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VISKart</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VISKart</title>
 
-  <!-- VENDORS STYLESHEET -->
-  <link rel="stylesheet" href="https://vispaui-postdev-deploy.netlify.app/css/main.css">
+    <!-- VENDORS STYLESHEET -->
+    <link
+      rel="stylesheet"
+      href="https://vispaui-postdev-deploy.netlify.app/css/main.css"
+    />
 
-  <!-- MAIN STYLESHEET -->
-  <link rel="stylesheet" href="./css/main.css">
-  
-  <!-- FAVICON -->
-  <link rel="icon" type="image/x-icon" href="./assets/logo.svg">
-</head>
-<body>
-  <h3>This is VISKart's Boiler Plate</h3>
-</body>
+    <!-- MAIN STYLESHEET -->
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="./assets/logo.svg" />
+  </head>
+  <body class="landing-page">
+    <!-------------------------------------
+                  NAVBAR 
+    -------------------------------------->
+    <header class="header">
+      <div class="header__item">
+        <img class="logo" src="./assets/logo.svg" alt="logo" />
+        <a href="./index.html" class="h-4">
+          <span class="primary-font">VIS</span>KART
+        </a>
+      </div>
+      <div class="header__item header-button__wrapper">
+        <a class="button btn-solid-primary" href="./pages/products.html">
+          Featured
+        </a>
+        <a class="button btn-plain btn-primary" href="./pages/products.html">
+          Top
+        </a>
+      </div>
+      <div class="header__item header-item__search">
+        <div class="input input__icons">
+          <input
+            class="input__field--text search"
+            type="text"
+            placeholder="Search..."
+          />
+        </div>
+      </div>
+      <div class="header__item header-menu__wrapper">
+        <ul class="header-menu__list">
+          <li class="txt-center header-menu__item">
+            <img
+              class="icon-md icon-dark"
+              src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/shopping-cart.svg"
+              alt="cart"
+            />
+          </li>
+          <li class="txt-center header-menu__item">
+            <img
+              class="icon-md icon-dark"
+              src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/heart.svg"
+              alt="cart"
+            />
+          </li>
+          <li class="txt-center header-menu__item">
+            <img
+              class="icon-md icon-dark"
+              src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/bell.svg"
+              alt="notification"
+            />
+          </li>
+          <li class="txt-center header-menu__item">
+            <img
+              class="icon-md icon-dark"
+              src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/cog.svg"
+              alt="settings"
+            />
+          </li>
+        </ul>
+      </div>
+      <div class="header__item">
+        <button class="button btn-plain btn-login" id="login-btn">Login</button>
+      </div>
+
+      <div class="modal__container" id="login-container">
+        <section class="modal mdl__icons mdl-primary" id="login-el">
+          <header class="modal__title">
+            <h1 class="h-5">Login</h1>
+            <button class="button btn-action btn-plain-icon modal__title--close" id="login-close-btn">
+              <img
+                  class="icon-light icon-lg button__icon"
+                  src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/close.svg"
+                  alt="close">
+            </button>
+          </header>
+          <main class="modal__body">
+            <div class="input input__icons input__premium">
+              <div class="input__email">
+                <input class="input__field--text email" type="text" placeholder="bablu_tailor@gmail.com">
+                <label class="input__label">Email</label>	
+              </div>
+            
+              <div class="input__password">
+                <input class="input__field--text password" type="text" placeholder="********">
+                <label class="input__label">Password</label>
+              </div>
+            </div>
+            <div class="remember-me__container">
+              <div class="checkbox">
+                <label class="radio__label" for="unchecked-box">
+                  <input class="input__field--checkbox" id="unchecked-box" name="unchecked" type="checkbox">
+                  Remember me!   
+                </label>
+              </div>
+              <a href="#" class="cp">Forget Password?</a>
+            </div>
+          </main>
+          <footer class="modal__footer">
+            <button class="button btn-solid-primary modal__footer--btn">Login</button>
+            <button class="button btn-outline-primary modal__footer--btn" id="signup-btn">Sign Up</button>
+          </footer>
+        </section>
+      </div>
+
+      <div class="modal__container" id="signup-container">
+        <section class="modal mdl__icons mdl-primary" id="signup-el">
+          <header class="modal__title">
+            <h1 class="h-5">Sign Up</h1>
+            <button class="button btn-action btn-plain-icon modal__title--close" id="signup-close-btn">
+              <img
+                  class="icon-light icon-lg button__icon"
+                  src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/close.svg"
+                  alt="close">
+            </button>
+          </header>
+          <main class="modal__body">
+            <div class="input input__icons input__premium">
+              <div class="input__email">
+                <input class="input__field--text email" type="text" placeholder="bablu_tailor@gmail.com">
+                <label class="input__label">Email</label>	
+              </div>
+
+              <div class="input__username">
+                <input class="input__field--text user" type="text" placeholder="bablu_tailor">
+                <label class="input__label">Username</label>
+              </div>
+            
+              <div class="input__password">
+                <input class="input__field--text password" type="text" placeholder="********">
+                <label class="input__label">Password</label>
+              </div>
+            </div>
+            <div class="checkbox txt-center">
+              <label class="radio__label" for="unchecked-box">
+                <input class="input__field--checkbox" id="unchecked-box" name="unchecked" type="checkbox">
+                Remember me!   
+              </label>
+            </div>
+          </main>
+          <footer class="modal__footer">
+            <button class="button btn-solid-primary modal__footer--btn">Sign Up</button>
+            <button class="button btn-outline-primary modal__footer--btn" id="login-signup-page-btn">Login</button>
+          </footer>
+        </section>
+      </div>
+    </header>
+
+    <!-------------------------------------
+                  MAIN 
+    -------------------------------------->
+    <main class="main">
+      <!-------------------------------------
+                  MAIN CAROUSEL 
+      -------------------------------------->
+      <figure class="main-carousel">
+        <img
+          class="main-carousel__image"
+          src="./assets/carousel-image.webp"
+          alt="hero-image"
+        />
+        <figcaption class="h-5 main-carousel__caption">
+          Fall Guys: Ultimate Knockout
+        </figcaption>
+      </figure>
+
+      <!-------------------------------------
+                  TOP PRODUCTS 
+      -------------------------------------->
+      <div class="products__heading">
+        <h5 class="h-5">Top Games</h5>
+        <a class="st-1 button btn-plain btn-primary" href="#">See all</a>
+      </div>
+      <section class="top-products">
+        <article class="top-item">
+          <img
+            class="top-item__image"
+            src="./assets/fallguys.png"
+            alt="fallguys"
+          />
+          <div class="top-item__disc">
+            <p class="st-1">Fall Guys: Ultimate Knockout</p>
+            <p class="cp">a massively 60 multiplayer game</p>
+          </div>
+          <button class="button btn-sm btn-solid-primary top-item__button">
+            $49.99
+          </button>
+        </article>
+
+        <article class="top-item">
+          <img
+            class="top-item__image"
+            src="./assets/minecraft.png"
+            alt="minecraft"
+          />
+          <div class="top-item__disc">
+            <p class="st-1">Minecraft</p>
+            <p class="cp">create anything you can imagine in your own world</p>
+          </div>
+          <button class="button btn-sm btn-solid-primary top-item__button">
+            $34.99
+          </button>
+        </article>
+
+        <article class="top-item">
+          <img
+            class="top-item__image"
+            src="./assets/dyinglight2.jpg"
+            alt="dyinglight2"
+          />
+          <div class="top-item__disc">
+            <p class="st-1">Dying Light 2</p>
+            <p class="cp">fight for survival in a post-apocalyptic open world</p>
+          </div>
+          <button class="button btn-sm btn-solid-primary top-item__button">
+            $99.99
+          </button>
+        </article>
+
+        <article class="top-item">
+          <img
+            class="top-item__image"
+            src="./assets/pubg.png"
+            alt="fallguys"
+          />
+          <div class="top-item__disc">
+            <p class="st-1">PUBG</p>
+            <p class="cp">loot weapons and supplies, and survive among 100 players</p>
+          </div>
+          <button class="button btn-sm btn-solid-primary top-item__button">
+            $19.99
+          </button>
+        </article>
+      </section>
+
+      <!-------------------------------------
+                  NEW PRODUCTS 
+      -------------------------------------->
+      <div class="products__heading">
+        <h5 class="h-5">New Games</h5>
+        <a class="st-1 button btn-plain btn-primary" href="#">See all</a>
+      </div>
+      <section class="new-products">
+        <article class="new-item">
+          <img
+            class="new-item__image"
+            src="./assets/fallguys.png"
+            alt="fallguys"
+          />
+          <div class="new-item__disc">
+            <p class="st-2">Fall Guys: Ultimate Knockout</p>
+          </div>
+          <button class="button btn-sm btn-solid-primary new-item__button">
+            $49.99
+          </button>
+        </article>
+
+        <article class="new-item">
+          <img
+            class="new-item__image"
+            src="./assets/pubg.png"
+            alt="fallguys"
+          />
+          <div class="new-item__disc">
+            <p class="st-2">PUBG</p>
+          </div>
+          <button class="button btn-sm btn-solid-primary new-item__button">
+            $19.99
+          </button>
+        </article>
+
+        <article class="new-item">
+          <img
+            class="new-item__image"
+            src="./assets/dyinglight2.jpg"
+            alt="fallguys"
+          />
+          <div class="new-item__disc">
+            <p class="st-2">Dying Light 2</p>
+          </div>
+          <button class="button btn-sm btn-solid-primary new-item__button">
+            $99.99
+          </button>
+        </article>
+
+        <article class="new-item">
+          <img
+            class="new-item__image"
+            src="./assets/minecraft.png"
+            alt="fallguys"
+          />
+          <div class="new-item__disc">
+            <p class="st-2">Minecraft</p>
+          </div>
+          <button class="button btn-sm btn-solid-primary new-item__button">
+            $34.99
+          </button>
+        </article>
+
+        <article class="new-item">
+          <img
+            class="new-item__image"
+            src="./assets/fallguys.png"
+            alt="fallguys"
+          />
+          <div class="new-item__disc">
+            <p class="st-2">Fall Guys: Ultimate Knockout</p>
+          </div>
+          <button class="button btn-sm btn-solid-primary new-item__button">
+            $49.99
+          </button>
+        </article>
+
+        <article class="new-item">
+          <img
+            class="new-item__image"
+            src="./assets/pubg.png"
+            alt="fallguys"
+          />
+          <div class="new-item__disc">
+            <p class="st-2">PUBG</p>
+          </div>
+          <button class="button btn-sm btn-solid-primary new-item__button">
+            $19.99
+          </button>
+        </article>
+
+        <article class="new-item">
+          <img
+            class="new-item__image"
+            src="./assets/dyinglight2.jpg"
+            alt="fallguys"
+          />
+          <div class="new-item__disc">
+            <p class="st-2">Dying Light 2</p>
+          </div>
+          <button class="button btn-sm btn-solid-primary new-item__button">
+            $99.99
+          </button>
+        </article>
+
+        <article class="new-item">
+          <img
+            class="new-item__image"
+            src="./assets/minecraft.png"
+            alt="fallguys"
+          />
+          <div class="new-item__disc">
+            <p class="st-2">Minecraft</p>
+          </div>
+          <button class="button btn-sm btn-solid-primary new-item__button">
+            $34.99
+          </button>
+        </article>
+
+        <article class="new-item">
+          <img
+            class="new-item__image"
+            src="./assets/fallguys.png"
+            alt="fallguys"
+          />
+          <div class="new-item__disc">
+            <p class="st-2">Fall Guys: Ultimate Knockout</p>
+          </div>
+          <button class="button btn-sm btn-solid-primary new-item__button">
+            $49.99
+          </button>
+        </article>
+
+        <article class="new-item">
+          <img
+            class="new-item__image"
+            src="./assets/pubg.png"
+            alt="fallguys"
+          />
+          <div class="new-item__disc">
+            <p class="st-2">PUBG</p>
+          </div>
+          <button class="button btn-sm btn-solid-primary new-item__button">
+            $19.99
+          </button>
+        </article>
+
+        <article class="new-item">
+          <img
+            class="new-item__image"
+            src="./assets/dyinglight2.jpg"
+            alt="fallguys"
+          />
+          <div class="new-item__disc">
+            <p class="st-2">Dying Light 2</p>
+          </div>
+          <button class="button btn-sm btn-solid-primary new-item__button">
+            $99.99
+          </button>
+        </article>
+
+        <article class="new-item">
+          <img
+            class="new-item__image"
+            src="./assets/minecraft.png"
+            alt="fallguys"
+          />
+          <div class="new-item__disc">
+            <p class="st-2">Minecraft</p>
+          </div>
+          <button class="button btn-sm btn-solid-primary new-item__button">
+            $34.99
+          </button>
+        </article>
+      </section>
+      
+      <!-------------------------------------
+                  MAIN PRODUCTS 
+      -------------------------------------->
+      <div class="products__heading">
+        <h5 class="h-5">Featured Games</h5>
+        <a class="st-1 button btn-plain btn-primary" href="#">See all</a>
+      </div>
+      <section class="main-products">
+        <article class="card card__ecommerce">
+          <div class="card__body">
+            <div class="card__badge">
+              <img class="badge__icon icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/bookmark.svg" alt="bookmark-icon"/>
+              <span class="card__discount">40% OFF</span>
+            </div>
+            <img src="./assets/cricket07.png" class="card__img" alt="card-image"/>
+            <div class="card__title">
+              <h1 class="h-5">Cricket 2007</h1>
+              <p class="caption">EA Sports</p>
+            </div>
+            <div class="card__content">
+              <p class="bd-5">$<strike>99.99</strike> <span class="card__content--newprice">59.99</span> /-</p>
+            </div>
+          </div>
+          <div class="card__footer">
+            <div class="card__footer--left">
+              <a class="card__button" href="#"><button class="button btn-sm btn-solid-primary">Buy - $59.99</button></a>
+            </div>
+            <div class="card__footer--right">
+              <a><img class="icon-sm icon-dark" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/heart.svg" alt="heart-icon"/></a>
+              <a><img class="icon-sm icon-dark" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/share.svg" alt="share-icon"/></a>
+              <a><img class="icon-sm icon-dark" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/menu.svg" alt="menu-icon"/></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card card__ecommerce">
+          <div class="card__body">
+            <div class="card__badge">
+              <img class="badge__icon icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/bookmark.svg" alt="bookmark-icon"/>
+              <span class="card__discount">20% OFF</span>
+            </div>
+            <img src="./assets/crazytaxi.png" class="card__img" alt="card-image"/>
+            <div class="card__title">
+              <h1 class="h-5">Crazy Taxi</h1>
+              <p class="caption">Dreamcast Games</p>
+            </div>
+            <div class="card__content">
+              <p class="bd-5">$<strike>39.99</strike> <span class="card__content--newprice">31.99</span> /-</p>
+            </div>
+          </div>
+          <div class="card__footer">
+            <div class="card__footer--left">
+              <a class="card__button" href="#"><button class="button btn-sm btn-solid-primary">Buy - $31.99</button></a>
+            </div>
+            <div class="card__footer--right">
+              <a><img class="icon-sm icon-dark" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/heart.svg" alt="heart-icon"/></a>
+              <a><img class="icon-sm icon-dark" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/share.svg" alt="share-icon"/></a>
+              <a><img class="icon-sm icon-dark" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/menu.svg" alt="menu-icon"/></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card card__ecommerce">
+          <div class="card__body">
+            <div class="card__badge">
+              <img class="badge__icon icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/bookmark.svg" alt="bookmark-icon"/>
+              <span class="card__discount">50% OFF</span>
+            </div>
+            <img src="./assets/nfsmw.webp" class="card__img" alt="card-image"/>
+            <div class="card__title">
+              <h1 class="h-5">NFS Most Wanted</h1>
+              <p class="caption">EA Games</p>
+            </div>
+            <div class="card__content">
+              <p class="bd-5">$<strike>99.99</strike> <span class="card__content--newprice">49.99</span> /-</p>
+            </div>
+          </div>
+          <div class="card__footer">
+            <div class="card__footer--left">
+              <a class="card__button" href="#"><button class="button btn-sm btn-solid-primary">Buy - $49.99</button></a>
+            </div>
+            <div class="card__footer--right">
+              <a><img class="icon-sm icon-dark" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/heart.svg" alt="heart-icon"/></a>
+              <a><img class="icon-sm icon-dark" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/share.svg" alt="share-icon"/></a>
+              <a><img class="icon-sm icon-dark" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/menu.svg" alt="menu-icon"/></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card card__ecommerce">
+          <div class="card__body">
+            <div class="card__badge">
+              <img class="badge__icon icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/bookmark.svg" alt="bookmark-icon"/>
+              <span class="card__discount">30% OFF</span>
+            </div>
+            <img src="./assets/roadrash.webp" class="card__img" alt="card-image"/>
+            <div class="card__title">
+              <h1 class="h-5">Roadrash</h1>
+              <p class="caption">EA Games</p>
+            </div>
+            <div class="card__content">
+              <p class="bd-5">$<strike>49.99</strike> <span class="card__content--newprice">34.99</span> /-</p>
+            </div>
+          </div>
+          <div class="card__footer">
+            <div class="card__footer--left">
+              <a class="card__button" href="#"><button class="button btn-sm btn-solid-primary">Buy - $34.99</button></a>
+            </div>
+            <div class="card__footer--right">
+              <a><img class="icon-sm icon-dark" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/heart.svg" alt="heart-icon"/></a>
+              <a><img class="icon-sm icon-dark" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/share.svg" alt="share-icon"/></a>
+              <a><img class="icon-sm icon-dark" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/menu.svg" alt="menu-icon"/></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card card__ecommerce">
+          <div class="card__body">
+            <div class="card__badge">
+              <img class="badge__icon icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/bookmark.svg" alt="bookmark-icon"/>
+              <span class="card__discount">10% OFF</span>
+            </div>
+            <img src="./assets/fifa07.jpg" class="card__img" alt="card-image"/>
+            <div class="card__title">
+              <h1 class="h-5">Fifa 07</h1>
+              <p class="caption">EA Sports</p>
+            </div>
+            <div class="card__content">
+              <p class="bd-5">$<strike>99.99</strike> <span class="card__content--newprice">89.99</span> /-</p>
+            </div>
+          </div>
+          <div class="card__footer">
+            <div class="card__footer--left">
+              <a class="card__button" href="#"><button class="button btn-sm btn-solid-primary">Buy - $89.99</button></a>
+            </div>
+            <div class="card__footer--right">
+              <a><img class="icon-sm icon-dark" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/heart.svg" alt="heart-icon"/></a>
+              <a><img class="icon-sm icon-dark" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/share.svg" alt="share-icon"/></a>
+              <a><img class="icon-sm icon-dark" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/menu.svg" alt="menu-icon"/></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card card__ecommerce">
+          <div class="card__body">
+            <div class="card__badge">
+              <img class="badge__icon icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/bookmark.svg" alt="bookmark-icon"/>
+              <span class="card__discount">25% OFF</span>
+            </div>
+            <img src="./assets/tod.png" class="card__img" alt="card-image"/>
+            <div class="card__title">
+              <h1 class="h-5">Total Overdose</h1>
+              <p class="caption">Eidos Games</p>
+            </div>
+            <div class="card__content">
+              <p class="bd-5">$<strike>49.99</strike> <span class="card__content--newprice">37.99</span> /-</p>
+            </div>
+          </div>
+          <div class="card__footer">
+            <div class="card__footer--left">
+              <a class="card__button" href="#"><button class="button btn-sm btn-solid-primary">Buy - $37.99</button></a>
+            </div>
+            <div class="card__footer--right">
+              <a><img class="icon-sm icon-dark" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/heart.svg" alt="heart-icon"/></a>
+              <a><img class="icon-sm icon-dark" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/share.svg" alt="share-icon"/></a>
+              <a><img class="icon-sm icon-dark" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/menu.svg" alt="menu-icon"/></a>
+            </div>
+          </div>
+        </article>
+      </section>
+      <div class="products__heading products__heading--seeallgames">
+        <a class="st-1 button btn-plain btn-primary" href="#">See all Games</a>
+      </div>
+    </main>
+
+    <!-------------------------------------
+                  FOOTER 
+    -------------------------------------->
+    <footer class="footer">
+      <section class="txt-center footer-content">
+        <article class="footer-left">
+          <a href="#" class="h-5"> Contribute to VISKart </a>
+          <p class="bd-5">
+            We are an Open Source Project. Join us to create more beautiful
+            components and serve the community of developers.
+          </p>
+          <div class="footer-left__sociallinks">
+            <a
+              href="https://twitter.com/VishalPatil1810"
+              class="button btn-socialmedia btn-solid-primary"
+            >
+              <img
+                class="icon-light icon-md button__icon"
+                src="https://vispaui-postdev-deploy.netlify.app/assets/twitter.svg"
+                alt="twitter"
+              />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/vishalrameshpatil"
+              class="button btn-socialmedia btn-solid-secondary"
+            >
+              <img
+                class="icon-light icon-md button__icon"
+                src="https://vispaui-postdev-deploy.netlify.app/assets/linkedin.svg"
+                alt="linkedin"
+              />
+            </a>
+
+            <a
+              href="https://www.instagram.com/_vishal_._lahsiv_/"
+              class="button btn-socialmedia btn-solid-danger"
+            >
+              <img
+                class="icon-light icon-md button__icon"
+                src="https://vispaui-postdev-deploy.netlify.app/assets/instagram.svg"
+                alt="instagram"
+              />
+            </a>
+
+            <a
+              href="https://medium.com/@vishalpatil18"
+              class="button btn-socialmedia btn-solid-dark"
+              style="background-color: black"
+            >
+              <img
+                class="icon-light icon-md button__icon"
+                src="https://vispaui-postdev-deploy.netlify.app/assets/medium.svg"
+                alt="medium"
+              />
+            </a>
+          </div>
+        </article>
+        <article class="footer-center">
+          <a href="./index.html">Home</a>
+          <a href="#">Products</a>
+          <a href="#">Featured</a>
+          <a href="#">Top</a>
+        </article>
+        <article class="footer-right">
+          <a href="#">My Cart</a>
+          <a href="#">Wishlist</a>
+          <a href="#">About</a>
+          <a href="#">Settings</a>
+        </article>
+      </section>
+      <p class="bd-5 footer-copyright">
+        Copyright &copy; 2022
+        <a href="https://github.com/VishalPatil18"> Vishal Patil </a>
+        . All Rights Reserved
+      </p>
+    </footer>
+  </body>
+  <!-- SCRIPT FILES -->
+  <script src="./scripts/script.js" defer></script>
 </html>

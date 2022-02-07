@@ -1,14 +1,364 @@
 /*
 ***************** GLOBAL STYLING *****************
 */
-
 html {
   color: var(--dark);
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
+.landing-page {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 60px 1fr 200px;
+}
 
 /*
 ***************** NAVBAR *****************
 */
+.header {
+  grid-column: 1/-1;
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-sm) 10%;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
 
+.header__item {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 5rem;
+  height: 5rem;
+}
+
+.primary-font {
+  color: var(--primary);
+  font-weight: var(--fw-3);
+}
+
+.header-button__wrapper {
+  background-color: var(--light);
+  border-radius: var(--br-sm);
+}
+
+.header-button__wrapper .button {
+  border-radius: var(--br-sm);
+}
+
+.header-item__search {
+  margin: 0;
+  margin-left: auto;
+}
+
+.header-item__search .search {
+  border-radius: var(--br-sm);
+  border: none;
+}
+
+.header-menu__wrapper {
+  margin-left: auto;
+}
+
+.header-menu__list {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  margin: 0;
+}
+
+.header-menu__item {
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  border-radius: var(--br-full);
+  padding: 1rem;
+}
+
+.header-menu__item:hover {
+  background-color: var(--light);
+}
+
+.btn-login:hover {
+  background-color: var(--light);
+}
+
+.modal__container {
+  z-index: 2;
+}
+
+.remember-me__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*
+***************** BREADCRUMB *****************
+*/
+.breadcrumb {
+  border: 2px solid cornflowerblue;
+  grid-column: 1/-1;
+}
+
+/*
+***************** SIDEBAR *****************
+*/
+.sidebar {
+  display: none;
+  border: 2px solid crimson;
+  grid-column: 1/4;
+  grid-row: 3/-1;
+}
+
+/*
+***************** MAIN *****************
+*/
+.main {
+  grid-column: 1/-1;
+  margin: 0 8%;
+  padding: var(--space-sm);
+}
+
+.main-carousel {
+  height: 300px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  margin-top: var(--space-md);
+}
+
+.main-carousel__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--br-xl);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
+}
+
+.main-carousel__caption {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  color: white;
+  padding: var(--space-sm) var(--space-md);
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 0 var(--br-xl);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.products__heading {
+  margin-top: var(--space-xl);
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-products {
+  margin-top: var(--space-md);
+  border-radius: var(--br-xl);
+  background-color: var(--light);
+  padding: var(--space-md);
+  display: grid;
+  gap: var(--space-md);
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  grid-template-rows: 1fr 1fr;
+}
+
+.top-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.top-item__image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: var(--br-md);
+}
+
+.top-item__disc {
+  margin-left: var(--space-sm);
+}
+
+.top-item__button {
+  margin-left: auto;
+}
+
+.new-products {
+  margin-top: var(--space-md);
+  border-radius: var(--br-xl);
+  background-color: var(--light);
+  padding: var(--space-md);
+  display: flex;
+  overflow-x: scroll;
+  align-items: center;
+  gap: var(--space-lg);
+}
+
+.new-item {
+  width: 100px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.new-item__image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: var(--br-md);
+}
+
+.main-products {
+  margin-top: var(--space-md);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  row-gap: var(--space-xl);
+  column-gap: var(--space-md);
+}
+
+.main-products .card {
+  width: 300px;
+  justify-self: center;
+}
+
+.card__img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.badge__icon {
+  width: 50px;
+}
+
+.products__heading--seeallgames {
+  justify-content: center;
+}
+
+/*
+***************** FOOTER *****************
+*/
+.footer {
+  grid-column: 1/-1;
+  background-color: var(--dark);
+  color: var(--light);
+  margin: 0 auto;
+  margin-top: auto;
+  padding: var(--space-xl) var(--space-xxxl) var(--space-xs);
+  width: 100%;
+}
+
+.footer-content {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.footer-left {
+  flex: 3;
+}
+
+.footer-left > a {
+  color: var(--primary);
+}
+
+.footer-left > p {
+  width: 80%;
+}
+
+.footer-left__sociallinks {
+  display: flex;
+  gap: var(--space-sm);
+  margin-top: var(--space-sm);
+}
+
+.footer-center,
+.footer-right {
+  flex: 1;
+}
+
+.footer-center > a,
+.footer-right > a {
+  color: var(--light);
+  font-size: var(--fs-xs-2);
+}
+.footer-center > a:hover,
+.footer-right > a:hover {
+  color: var(--primary);
+  transition: 0.2s ease-in;
+}
+
+.footer-copyright {
+  text-align: center;
+  margin-top: var(--space-xl);
+  font-size: var(--fs-xxs-2);
+}
+
+.footer-copyright > a {
+  color: var(--primary);
+}
+
+/*
+***************** MEDIA QUERIES *****************
+*/
+@media screen and (min-width: 480px) {
+}
+
+@media screen and (min-width: 640px) {
+}
+
+@media screen and (min-width: 768px) {
+  .landing-page {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-template-rows: 80px 1fr 200px;
+  }
+
+  .main {
+    grid-column: 4 / -1;
+  }
+
+  .landing-page .main {
+    grid-column: 1/-1;
+  }
+
+  .sidebar {
+    display: initial;
+  }
+
+  .footer {
+    grid-column: 4 / -1;
+  }
+
+  .landing-page .footer {
+    grid-column: 1/-1;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+}
