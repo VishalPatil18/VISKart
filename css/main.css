@@ -192,8 +192,7 @@ html {
 */
 .main {
   grid-column: 1/-1;
-  margin: 0 8%;
-  padding: var(--space-sm);
+  padding: var(--space-sm) 10%;
   overflow-y: scroll;
   height: 100%;
 }
@@ -303,6 +302,11 @@ html {
   column-gap: var(--space-md);
 }
 
+.landing-page .main-products {
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-column: 3/-1;
+}
+
 .main-products .card {
   width: 300px;
   justify-self: center;
@@ -334,6 +338,10 @@ html {
   margin-top: auto;
   padding: var(--space-xl) var(--space-xxxl) var(--space-xs);
   width: 100%;
+}
+
+.landing-page .footer {
+  grid-row: 3/-1;
 }
 
 .footer-content {
