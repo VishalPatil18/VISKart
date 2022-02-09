@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Cart / VISKart</title>
+
+    <!-- VENDORS STYLESHEET -->
+    <link
+      rel="stylesheet"
+      href="https://vispaui-postdev-deploy.netlify.app/css/main.css"
+    />
+
+    <!-- MAIN STYLESHEET -->
+    <link rel="stylesheet" href="../css/main.css" />
+
+    <link rel="stylesheet" href="../css/cart.css" />
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="../assets/logo.svg" />
+  </head>
+  <body class="cart-page">
+    <!-------------------------------------
+                  NAVBAR 
+    -------------------------------------->
+    <header class="header">
+      <div class="header__item">
+        <img class="logo" src="../assets/logo.svg" alt="logo" />
+        <a href="../index.html" class="h-4">
+          <span class="primary-font">VIS</span>KART
+        </a>
+      </div>
+      <div class="header__item header-button__wrapper">
+        <a class="button btn-solid-primary" href="./products.html">
+          Featured
+        </a>
+        <a class="button btn-plain btn-primary" href="./products.html"> Top </a>
+      </div>
+      <div class="header__item header-item__search">
+        <div class="input input__icons">
+          <input
+            class="input__field--text search"
+            type="text"
+            placeholder="Search..."
+          />
+        </div>
+      </div>
+      <div class="header__item header-menu__wrapper">
+        <ul class="header-menu__list">
+          <a href="./cart.html">
+            <li class="txt-center header-menu__item">
+              <img
+                class="icon-md icon-dark"
+                src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/shopping-cart.svg"
+                alt="cart"
+              />
+            </li>
+          </a>
+          <a href="#">
+            <li class="txt-center header-menu__item">
+              <img
+                class="icon-md icon-dark"
+                src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/heart.svg"
+                alt="heart"
+              />
+            </li>
+          </a>
+          <a href="#">
+            <li class="txt-center header-menu__item">
+              <img
+                class="icon-md icon-dark"
+                src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/bell.svg"
+                alt="notification"
+              />
+            </li>
+          </a>
+
+          <a href="#">
+            <li class="txt-center header-menu__item">
+              <img
+                class="icon-md icon-dark"
+                src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/cog.svg"
+                alt="settings"
+              />
+            </li>
+          </a>
+        </ul>
+      </div>
+      <div class="header__item">
+        <img
+          class="icon-lg profile-icon"
+          src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/profile_dark.png"
+          alt="profile"
+        />
+        <button class="button btn-sm btn-plain profile-name" id="login-btn">
+          Bablu_tailor
+        </button>
+      </div>
+    </header>
+
+    <!-------------------------------------
+                  BREADCRUMB 
+    -------------------------------------->
+    <nav class="breadcrumb">
+      <ul class="breadcrumb__list">
+        <li class="breadcrumb__item">
+          <a class="breadcrumb__link" href="../index.html">Home</a>
+        </li>
+        <li class="breadcrumb__item">
+          <img
+            class="icon-md icon-grey breadcrumb-icon"
+            src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/angle-up.svg"
+            alt="arrow"
+          />
+        </li>
+        <li class="breadcrumb__item active">
+          <a class="breadcrumb__link" href="./cart.html">My Cart</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-------------------------------------
+                  MAIN 
+    -------------------------------------->
+    <main class="main">
+      <!-------------------------------------
+                  CART PRODUCTS 
+      -------------------------------------->
+      <div class="products__heading">
+        <h5 class="h-5">My Cart</h5>
+      </div>
+      <div class="products-and-price">
+        <section class="my-products">
+          <article class="my-item horizontal-card">
+            <div class="card__badge">
+              <img class="badge__icon icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/bookmark.svg" alt="bookmark-icon"/>
+              <span class="card__discount">40% OFF</span>
+            </div>
+            <img
+              class="my-item__image"
+              src="../assets/fallguys.png"
+              alt="fallguys"
+            />
+            <div class="card-body">
+              <div class="my-item__disc">
+                <h5 class="h-5">Fall Guys: Ultimate Knockout</h5>
+                <p class="bd-5">a massively 60 multiplayer game</p>
+              </div>
+              <p class="bd-5">$ <strike>99.99</strike> <span class="card__content--newprice">59.99</span> /-</p>
+              <div class="card-button-wrapper">
+                <button class="button btn-solid-danger top-item__button">
+                  Remove
+                </button>
+                <button class="button btn-solid-primary top-item__button">
+                  Add to Wishlist
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="my-item horizontal-card">
+            <div class="card__badge">
+              <img class="badge__icon icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/bookmark.svg" alt="bookmark-icon"/>
+              <span class="card__discount">20% OFF</span>
+            </div>
+            <img
+              class="my-item__image"
+              src="../assets/cricket07.png"
+              alt="cricket07"
+            />
+            <div class="card-body">
+              <div class="my-item__disc">
+                <h5 class="h-5">Cricket 07</h5>
+                <p class="bd-5">enjoy all cricketing legends at one place</p>
+              </div>
+              <p class="bd-5">$ <strike>84.99</strike> <span class="card__content--newprice">69.99</span> /-</p>
+              <div class="card-button-wrapper">
+                <button class="button btn-solid-danger top-item__button">
+                  Remove
+                </button>
+                <button class="button btn-solid-primary top-item__button">
+                  Add to Wishlist
+                </button>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <!-------------------------------------
+                      PRICE DETAILS 
+        -------------------------------------->
+        <aside class="price-details">
+          <div class="card">
+            <div class="card__title">
+              <h5 class="h-5">Price Details</h5>
+            </div>
+            <div class="card__content">
+              <div class="price-desc">
+                <p class="bd-5">Price(2 items)</p>
+                <p class="st-1 price-value">$149.00</p>
+              </div>
+              <div class="price-desc">
+                <p class="bd-5">Discount</p>
+                <p class="st-1 price-value">-$25.00</p>
+              </div>
+              <div class="price-desc">
+                <p class="bd-5">Delivery Charges</p>
+                <p class="st-1 price-value">$5.00</p>
+              </div>
+              <div class="price-desc total-amount">
+                <p class="bd-5">TOTAL AMOUNT</p>
+                <p class="st-1 price-value">$129.00</p>
+              </div>
+              <div class="price-desc">
+                <p class="cp card-caption">You will save $25 on this order</p>
+              </div>
+            </div>
+            <a class="card__button" href="#">
+              <button class="button btn-solid-primary">
+                Place Order - $129.00
+              </button>
+            </a>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <!-------------------------------------
+                  FOOTER 
+    -------------------------------------->
+    <footer class="footer">
+      <section class="txt-center footer-content">
+        <article class="footer-left">
+          <a href="https://github.com/VishalPatil18/VISKart" class="h-5">
+            Contribute to VISKart
+          </a>
+          <p class="bd-5">
+            We are an Open Source Project. Join us to create more beautiful
+            components and serve the community of developers.
+          </p>
+          <div class="footer-left__sociallinks">
+            <a
+              href="https://twitter.com/VishalPatil1810"
+              class="button btn-socialmedia btn-solid-primary"
+            >
+              <img
+                class="icon-light icon-md button__icon"
+                src="https://vispaui-postdev-deploy.netlify.app/assets/twitter.svg"
+                alt="twitter"
+              />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/vishalrameshpatil"
+              class="button btn-socialmedia btn-solid-secondary"
+            >
+              <img
+                class="icon-light icon-md button__icon"
+                src="https://vispaui-postdev-deploy.netlify.app/assets/linkedin.svg"
+                alt="linkedin"
+              />
+            </a>
+
+            <a
+              href="https://www.instagram.com/_vishal_._lahsiv_/"
+              class="button btn-socialmedia btn-solid-danger"
+            >
+              <img
+                class="icon-light icon-md button__icon"
+                src="https://vispaui-postdev-deploy.netlify.app/assets/instagram.svg"
+                alt="instagram"
+              />
+            </a>
+
+            <a
+              href="https://medium.com/@vishalpatil18"
+              class="button btn-socialmedia btn-solid-dark"
+              style="background-color: black"
+            >
+              <img
+                class="icon-light icon-md button__icon"
+                src="https://vispaui-postdev-deploy.netlify.app/assets/medium.svg"
+                alt="medium"
+              />
+            </a>
+          </div>
+        </article>
+        <article class="footer-center">
+          <a href="../index.html">Home</a>
+          <a href="./products.html">Products</a>
+          <a href="#">Featured</a>
+          <a href="#">Top</a>
+        </article>
+        <article class="footer-right">
+          <a href="./cart.html">My Cart</a>
+          <a href="#">Wishlist</a>
+          <a href="#">About</a>
+          <a href="#">Settings</a>
+        </article>
+      </section>
+      <p class="bd-5 footer-copyright">
+        Copyright &copy; 2022
+        <a href="https://github.com/VishalPatil18"> Vishal Patil </a>
+        . All Rights Reserved
+      </p>
+    </footer>
+  </body>
+</html>

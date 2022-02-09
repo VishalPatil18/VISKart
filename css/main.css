@@ -106,6 +106,19 @@ html {
   align-items: center;
 }
 
+.profile-icon {
+  border-radius: var(--br-full);
+}
+
+.profile-name {
+  font-size: var(--fs-xs-2);
+  padding: 5px;
+}
+
+.profile-name:hover {
+  background-color: var(--light);
+}
+
 /*
 ***************** BREADCRUMB *****************
 */
@@ -193,7 +206,6 @@ html {
 .main {
   grid-column: 1/-1;
   padding: var(--space-sm) 10%;
-  overflow-y: scroll;
   height: 100%;
 }
 
