@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Cart / VISKart</title>
+    <title>Wishlist / VISKart</title>
 
     <!-- VENDORS STYLESHEET -->
     <link
@@ -14,13 +14,13 @@
 
     <!-- MAIN STYLESHEET -->
     <link rel="stylesheet" href="../css/main.css" />
-
-    <link rel="stylesheet" href="../css/cart.css" />
+    <link rel="stylesheet" href="../css/products.css" />
+    <link rel="stylesheet" href="../css/wishlist.css" />
 
     <!-- FAVICON -->
     <link rel="icon" type="image/x-icon" href="../assets/logo.svg" />
   </head>
-  <body class="cart-page">
+  <body class="wishlist-page">
     <!-------------------------------------
                   NAVBAR 
     -------------------------------------->
@@ -102,7 +102,7 @@
     <!-------------------------------------
                   BREADCRUMB 
     -------------------------------------->
-    <nav class="breadcrumb">
+    <nav class="breadcrumb wishlist-page__breadcrumb">
       <ul class="breadcrumb__list">
         <li class="breadcrumb__item">
           <a class="breadcrumb__link" href="../index.html">Home</a>
@@ -115,7 +115,7 @@
           />
         </li>
         <li class="breadcrumb__item active">
-          <a class="breadcrumb__link" href="./cart.html">My Cart</a>
+          <a class="breadcrumb__link" href="./wishlist.html">Wishlist</a>
         </li>
       </ul>
     </nav>
@@ -128,101 +128,94 @@
                   CART PRODUCTS 
       -------------------------------------->
       <div class="products__heading">
-        <h5 class="h-5">My Cart</h5>
+        <h5 class="h-5">My Wishlist</h5>
       </div>
-      <div class="products-and-price">
-        <section class="my-products">
-          <article class="my-item horizontal-card">
-            <div class="card__badge">
-              <img class="badge__icon icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/bookmark.svg" alt="bookmark-icon"/>
-              <span class="card__discount">40% OFF</span>
-            </div>
-            <img
-              class="my-item__image"
-              src="../assets/fallguys.png"
-              alt="fallguys"
-            />
-            <div class="card-body">
-              <div class="my-item__disc">
-                <h5 class="h-5">Fall Guys: Ultimate Knockout</h5>
-                <p class="bd-5">a massively 60 multiplayer game</p>
+      <div class="wishlist">
+        <section class="wishlist-items card-small">
+          <article class="card card__ecommerce">
+            <div class="card__body">
+              <div class="card__badge">
+                <img class="badge__icon icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/bookmark.svg" alt="bookmark-icon"/>
+                <span class="card__discount">40% OFF</span>
               </div>
-              <p class="bd-5">$ <strike>99.99</strike> <span class="card__content--newprice">59.99</span> /-</p>
-              <div class="card-button-wrapper">
-                <button class="button btn-solid-danger top-item__button">
-                  Remove
-                </button>
-                <button class="button btn-solid-primary top-item__button">
-                  Add to Wishlist
-                </button>
+              <img src="../assets/cricket07.png" class="card__img" alt="card-image"/>
+              <div class="card__title">
+                <h1 class="h-5">Cricket 2007</h1>
+                <p class="caption">EA Sports</p>
+              </div>
+              <div class="card__content">
+                <p class="bd-5 card__price">$<strike>99.99</strike> <span class="card__content--newprice">59.99</span> /-</p>
+              </div>
+            </div>
+            <div class="card__footer">
+              <div class="card__footer--left">
+                <a class="card__button" href="#"><button class="button btn-solid-primary buy-button">Buy - $49.99</button></a>
+                <a class="card__button" href="#"><button class="button btn-solid-danger remove-btn">Remove from Wishlist</button></a>
+              </div>
+              <div class="card__footer--right">
+                <a><img class="icon-md icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/heart.svg" alt="heart-icon"/></a>
+                <a><img class="icon-md icon-success" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/share.svg" alt="share-icon"/></a>
+                <a><img class="icon-md icon-primary" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/menu.svg" alt="menu-icon"/></a>
               </div>
             </div>
           </article>
 
-          <article class="my-item horizontal-card">
-            <div class="card__badge">
-              <img class="badge__icon icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/bookmark.svg" alt="bookmark-icon"/>
-              <span class="card__discount">20% OFF</span>
-            </div>
-            <img
-              class="my-item__image"
-              src="../assets/cricket07.png"
-              alt="cricket07"
-            />
-            <div class="card-body">
-              <div class="my-item__disc">
-                <h5 class="h-5">Cricket 07</h5>
-                <p class="bd-5">enjoy all cricketing legends at one place</p>
+          <article class="card card__ecommerce">
+            <div class="card__body">
+              <div class="card__badge">
+                <img class="badge__icon icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/bookmark.svg" alt="bookmark-icon"/>
+                <span class="card__discount">20% OFF</span>
               </div>
-              <p class="bd-5">$ <strike>84.99</strike> <span class="card__content--newprice">69.99</span> /-</p>
-              <div class="card-button-wrapper">
-                <button class="button btn-solid-danger top-item__button">
-                  Remove
-                </button>
-                <button class="button btn-solid-primary top-item__button">
-                  Add to Wishlist
-                </button>
+              <img src="../assets/crazytaxi.png" class="card__img" alt="card-image"/>
+              <div class="card__title">
+                <h1 class="h-5">Crazy Taxi</h1>
+                <p class="caption">Dreamcast Games</p>
+              </div>
+              <div class="card__content">
+                <p class="bd-5 card__price">$<strike>39.99</strike> <span class="card__content--newprice">31.99</span> /-</p>
+              </div>
+            </div>
+            <div class="card__footer">
+              <div class="card__footer--left">
+                <a class="card__button" href="#"><button class="button btn-solid-primary buy-button">Buy - $49.99</button></a>
+                <a class="card__button" href="#"><button class="button btn-solid-danger remove-btn">Remove from Wishlist</button></a>
+              </div>
+              <div class="card__footer--right">
+                <a><img class="icon-md icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/heart.svg" alt="heart-icon"/></a>
+                <a><img class="icon-md icon-success" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/share.svg" alt="share-icon"/></a>
+                <a><img class="icon-md icon-primary" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/menu.svg" alt="menu-icon"/></a>
+              </div>
+            </div>
+          </article>
+  
+          <article class="card card__ecommerce">
+            <div class="card__body">
+              <div class="card__badge">
+                <img class="badge__icon icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/bookmark.svg" alt="bookmark-icon"/>
+                <span class="card__discount">50% OFF</span>
+              </div>
+              <img src="../assets/nfsmw.webp" class="card__img" alt="card-image"/>
+              <div class="card__title">
+                <h1 class="h-5">NFS Most Wanted</h1>
+                <p class="caption">EA Games</p>
+              </div>
+              <div class="card__content">
+                <p class="bd-5 card__price">$<strike>99.99</strike> <span class="card__content--newprice">49.99</span> /-</p>
+              </div>
+            </div>
+            <div class="card__footer">
+              <div class="card__footer--left">
+                <a class="card__button" href="#"><button class="button btn-solid-primary buy-button">Buy - $49.99</button></a>
+                <a class="card__button" href="#"><button class="button btn-solid-danger remove-btn">Remove from Wishlist</button></a>
+              </div>
+              <div class="card__footer--right">
+                <a><img class="icon-md icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/heart.svg" alt="heart-icon"/></a>
+                <a><img class="icon-md icon-success" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/share.svg" alt="share-icon"/></a>
+                <a><img class="icon-md icon-primary" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/menu.svg" alt="menu-icon"/></a>
               </div>
             </div>
           </article>
         </section>
-
-        <!-------------------------------------
-                      PRICE DETAILS 
-        -------------------------------------->
-        <aside class="price-details">
-          <div class="card">
-            <div class="card__title">
-              <h5 class="h-5">Price Details</h5>
-            </div>
-            <div class="card__content">
-              <div class="price-desc">
-                <p class="bd-5">Price(2 items)</p>
-                <p class="st-1 price-value">$149.00</p>
-              </div>
-              <div class="price-desc">
-                <p class="bd-5">Discount</p>
-                <p class="st-1 price-value">-$25.00</p>
-              </div>
-              <div class="price-desc">
-                <p class="bd-5">Delivery Charges</p>
-                <p class="st-1 price-value">$5.00</p>
-              </div>
-              <div class="price-desc total-amount">
-                <p class="bd-5">TOTAL AMOUNT</p>
-                <p class="st-1 price-value">$129.00</p>
-              </div>
-              <div class="price-desc">
-                <p class="cp card-caption">You will save $25 on this order</p>
-              </div>
-            </div>
-            <a class="card__button" href="#">
-              <button class="button btn-solid-primary">
-                Place Order - $129.00
-              </button>
-            </a>
-          </div>
-        </aside>
       </div>
     </main>
 
