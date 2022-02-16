@@ -245,443 +245,455 @@
       </ul>
     </nav>
 
-    <!-------------------------------------
-                SIDEBAR 
-    -------------------------------------->
-    <aside class="sidebar">
-      <div class="sidebar-title">
-        <h5 class="h-5">Filters</h5>
-        <button class="button btn-plain btn-sm btn-danger">Clear</button>
-      </div>
-      <div class="sidebar-price slider__container">
-        <h6 class="h-6 sidebar-item__title">Price</h6>
-        <div class="price-label cp">
-          <span>$50</span>
-          <span>$150</span>
-          <span>$200</span>
-        </div>
-        <input type="range" min="1" max="100" value="50" class="slider">
-      </div>
-      <div class="checkbox">
-        <h6 class="h-6 sidebar-item__title">Sort by</h6>
-        <div class="radio-item">
-          <input class="input__field--radio" name="sorting" type="radio" checked id="lowtohigh">
-          <label class="radio__label" for="lowtohigh">Price - Low to High</label>
-        </div>
-
-        <div class="radio-item">
-          <input class="input__field--radio" name="sorting" type="radio" id="hightolow">
-          <label class="radio__label" for="hightolow">Price - High to Low</label>
-        </div>
-      </div>
-      <div class="checkbox">
-        <h6 class="h-6 sidebar-item__title">Category</h6>
-        <label class="radio__label" for="computer">
-          <input class="input__field--checkbox" id="computer" name="checked" type="checkbox" checked>
-          Computer Games
-        </label>
-        <label class="radio__label" for="playstation">
-          <input class="input__field--checkbox" id="playstation" name="unchecked" type="checkbox">
-          PlayStation Games
-        </label>
-        <label class="radio__label" for="xbox">
-          <input class="input__field--checkbox" id="xbox" name="unchecked" type="checkbox">
-          X-Box Games
-        </label>
-        <label class="radio__label" for="arvr">
-          <input class="input__field--checkbox" id="arvr" name="unchecked" type="checkbox">
-          AR/VR Games
-        </label>
-      </div>
-      <div class="checkbox">
-        <h6 class="h-6 sidebar-item__title">Brand</h6>
-        <label class="radio__label" for="eagames">
-          <input class="input__field--checkbox" id="eagames" name="checked" type="checkbox" checked>
-          EA Games
-        </label>
-        <label class="radio__label" for="nintendo">
-          <input class="input__field--checkbox" id="nintendo" name="checked" type="checkbox" checked>
-          Nintendo
-        </label>
-        <label class="radio__label" for="rockstargames">
-          <input class="input__field--checkbox" id="rockstargames" name="unchecked" type="checkbox">
-          Rockstar Games
-        </label>
-        <label class="radio__label" for="ubisoft">
-          <input class="input__field--checkbox" id="ubisoft" name="unchecked" type="checkbox">
-          Ubisoft
-        </label>
-        <label class="radio__label" for="activision">
-          <input class="input__field--checkbox" id="activision" name="unchecked" type="checkbox">
-          Activision Blizzard
-        </label>
-      </div>
-      <div class="checkbox">
-        <h6 class="h-6 sidebar-item__title">Rating</h6>
-        <div class="radio-item">
-          <input class="input__field--radio" name="rating" type="radio" checked id="stars4">
-          <label class="radio__label" for="stars4">4 Stars & above</label>
-        </div>
-
-        <div class="radio-item">
-          <input class="input__field--radio" name="rating" type="radio" id="stars3">
-          <label class="radio__label" for="stars3">3 Stars & above</label>
-        </div>
-
-        <div class="radio-item">
-          <input class="input__field--radio" name="rating" type="radio" id="stars2">
-          <label class="radio__label" for="stars2">2 Stars & above</label>
-        </div>
-
-        <div class="radio-item">
-          <input class="input__field--radio" name="rating" type="radio" id="stars1">
-          <label class="radio__label" for="stars1">1 Stars & above</label>
-        </div>
-      </div>
-    </aside>
-
-    <!-------------------------------------
-                  MAIN 
-    -------------------------------------->
-    <main class="main">
+    <section class="products-container">
       <!-------------------------------------
-                  MAIN PRODUCTS 
+                  SIDEBAR 
       -------------------------------------->
-      <div class="products__heading">
-        <h5 class="h-5">Featured Games</h5>
-        <p class="cp">(Showing all Games)</p>
-      </div>
-      <section class="main-products card-small">
-        <article class="card card__ecommerce">
-          <div class="card__body">
-            <div class="card__badge">
-              <img class="badge__icon icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/bookmark.svg" alt="bookmark-icon"/>
-              <span class="card__discount">40% OFF</span>
-            </div>
-            <img src="../assets/cricket07.png" class="card__img" alt="card-image"/>
-            <div class="card__title">
-              <h1 class="h-5">Cricket 2007</h1>
-              <p class="caption">EA Sports</p>
-            </div>
-            <div class="card__content">
-              <p class="bd-5 card__price">$<strike>99.99</strike> <span class="card__content--newprice">59.99</span> /-</p>
-            </div>
+      <aside class="sidebar" id="filter-sidebar">
+        <button class="button btn-plain sidebar__close--btn" id="sidebar-close-btn">
+          <img class="icon-md icon-dark drawer__item--icon" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/times.svg" alt="close">
+        </button>
+        <div class="sidebar-title">
+          <h5 class="h-5">Filters</h5>
+          <button class="button btn-plain btn-sm btn-danger">Clear</button>
+        </div>
+        <div class="sidebar-price slider__container">
+          <h6 class="h-6 sidebar-item__title">Price</h6>
+          <div class="price-label cp">
+            <span>$50</span>
+            <span>$150</span>
+            <span>$200</span>
           </div>
-          <div class="card__footer">
-            <div class="card__footer--left">
-              <a class="card__button" href="#"><button class="button btn-solid-primary buy-button">Buy - $59.99</button></a>
-            </div>
-            <div class="card__footer--right">
-              <a><img class="icon-md icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/heart.svg" alt="heart-icon"/></a>
-              <a><img class="icon-md icon-success" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/share.svg" alt="share-icon"/></a>
-              <a><img class="icon-md icon-primary" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/menu.svg" alt="menu-icon"/></a>
-            </div>
+          <input type="range" min="1" max="100" value="50" class="slider">
+        </div>
+        <div class="checkbox">
+          <h6 class="h-6 sidebar-item__title">Sort by</h6>
+          <div class="radio-item">
+            <input class="input__field--radio" name="sorting" type="radio" checked id="lowtohigh">
+            <label class="radio__label" for="lowtohigh">Price - Low to High</label>
           </div>
-        </article>
 
-        <article class="card card__ecommerce">
-          <div class="card__body">
-            <div class="card__badge">
-              <img class="badge__icon icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/bookmark.svg" alt="bookmark-icon"/>
-              <span class="card__discount">20% OFF</span>
-            </div>
-            <img src="../assets/crazytaxi.png" class="card__img" alt="card-image"/>
-            <div class="card__title">
-              <h1 class="h-5">Crazy Taxi</h1>
-              <p class="caption">Dreamcast Games</p>
-            </div>
-            <div class="card__content">
-              <p class="bd-5 card__price">$<strike>39.99</strike> <span class="card__content--newprice">31.99</span> /-</p>
-            </div>
+          <div class="radio-item">
+            <input class="input__field--radio" name="sorting" type="radio" id="hightolow">
+            <label class="radio__label" for="hightolow">Price - High to Low</label>
           </div>
-          <div class="card__footer">
-            <div class="card__footer--left">
-              <a class="card__button" href="#"><button class="button btn-solid-primary buy-button">Buy - $31.99</button></a>
-            </div>
-            <div class="card__footer--right">
-              <a><img class="icon-md icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/heart.svg" alt="heart-icon"/></a>
-              <a><img class="icon-md icon-success" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/share.svg" alt="share-icon"/></a>
-              <a><img class="icon-md icon-primary" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/menu.svg" alt="menu-icon"/></a>
-            </div>
+        </div>
+        <div class="checkbox">
+          <h6 class="h-6 sidebar-item__title">Category</h6>
+          <label class="radio__label" for="computer">
+            <input class="input__field--checkbox" id="computer" name="checked" type="checkbox" checked>
+            Computer Games
+          </label>
+          <label class="radio__label" for="playstation">
+            <input class="input__field--checkbox" id="playstation" name="unchecked" type="checkbox">
+            PlayStation Games
+          </label>
+          <label class="radio__label" for="xbox">
+            <input class="input__field--checkbox" id="xbox" name="unchecked" type="checkbox">
+            X-Box Games
+          </label>
+          <label class="radio__label" for="arvr">
+            <input class="input__field--checkbox" id="arvr" name="unchecked" type="checkbox">
+            AR/VR Games
+          </label>
+        </div>
+        <div class="checkbox">
+          <h6 class="h-6 sidebar-item__title">Brand</h6>
+          <label class="radio__label" for="eagames">
+            <input class="input__field--checkbox" id="eagames" name="checked" type="checkbox" checked>
+            EA Games
+          </label>
+          <label class="radio__label" for="nintendo">
+            <input class="input__field--checkbox" id="nintendo" name="checked" type="checkbox" checked>
+            Nintendo
+          </label>
+          <label class="radio__label" for="rockstargames">
+            <input class="input__field--checkbox" id="rockstargames" name="unchecked" type="checkbox">
+            Rockstar Games
+          </label>
+          <label class="radio__label" for="ubisoft">
+            <input class="input__field--checkbox" id="ubisoft" name="unchecked" type="checkbox">
+            Ubisoft
+          </label>
+          <label class="radio__label" for="activision">
+            <input class="input__field--checkbox" id="activision" name="unchecked" type="checkbox">
+            Activision Blizzard
+          </label>
+        </div>
+        <div class="checkbox">
+          <h6 class="h-6 sidebar-item__title">Rating</h6>
+          <div class="radio-item">
+            <input class="input__field--radio" name="rating" type="radio" checked id="stars4">
+            <label class="radio__label" for="stars4">4 Stars & above</label>
           </div>
-        </article>
 
-        <article class="card card__ecommerce">
-          <div class="card__body">
-            <div class="card__badge">
-              <img class="badge__icon icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/bookmark.svg" alt="bookmark-icon"/>
-              <span class="card__discount">50% OFF</span>
-            </div>
-            <img src="../assets/nfsmw.webp" class="card__img" alt="card-image"/>
-            <div class="card__title">
-              <h1 class="h-5">NFS Most Wanted</h1>
-              <p class="caption">EA Games</p>
-            </div>
-            <div class="card__content">
-              <p class="bd-5 card__price">$<strike>99.99</strike> <span class="card__content--newprice">49.99</span> /-</p>
-            </div>
+          <div class="radio-item">
+            <input class="input__field--radio" name="rating" type="radio" id="stars3">
+            <label class="radio__label" for="stars3">3 Stars & above</label>
           </div>
-          <div class="card__footer">
-            <div class="card__footer--left">
-              <a class="card__button" href="#"><button class="button btn-solid-primary buy-button">Buy - $49.99</button></a>
-            </div>
-            <div class="card__footer--right">
-              <a><img class="icon-md icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/heart.svg" alt="heart-icon"/></a>
-              <a><img class="icon-md icon-success" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/share.svg" alt="share-icon"/></a>
-              <a><img class="icon-md icon-primary" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/menu.svg" alt="menu-icon"/></a>
-            </div>
-          </div>
-        </article>
 
-        <article class="card card__ecommerce">
-          <div class="card__body">
-            <div class="card__badge">
-              <img class="badge__icon icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/bookmark.svg" alt="bookmark-icon"/>
-              <span class="card__discount">30% OFF</span>
-            </div>
-            <img src="../assets/roadrash.webp" class="card__img" alt="card-image"/>
-            <div class="card__title">
-              <h1 class="h-5">Roadrash</h1>
-              <p class="caption">EA Games</p>
-            </div>
-            <div class="card__content">
-              <p class="bd-5 card__price">$<strike>49.99</strike> <span class="card__content--newprice">34.99</span> /-</p>
-            </div>
+          <div class="radio-item">
+            <input class="input__field--radio" name="rating" type="radio" id="stars2">
+            <label class="radio__label" for="stars2">2 Stars & above</label>
           </div>
-          <div class="card__footer">
-            <div class="card__footer--left">
-              <a class="card__button" href="#"><button class="button btn-solid-primary buy-button">Buy - $34.99</button></a>
-            </div>
-            <div class="card__footer--right">
-              <a><img class="icon-md icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/heart.svg" alt="heart-icon"/></a>
-              <a><img class="icon-md icon-success" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/share.svg" alt="share-icon"/></a>
-              <a><img class="icon-md icon-primary" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/menu.svg" alt="menu-icon"/></a>
-            </div>
-          </div>
-        </article>
 
-        <article class="card card__ecommerce">
-          <div class="card__body">
-            <div class="card__badge">
-              <img class="badge__icon icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/bookmark.svg" alt="bookmark-icon"/>
-              <span class="card__discount">10% OFF</span>
-            </div>
-            <img src="../assets/fifa07.jpg" class="card__img" alt="card-image"/>
-            <div class="card__title">
-              <h1 class="h-5">Fifa 07</h1>
-              <p class="caption">EA Sports</p>
-            </div>
-            <div class="card__content">
-              <p class="bd-5 card__price">$<strike>99.99</strike> <span class="card__content--newprice">89.99</span> /-</p>
-            </div>
+          <div class="radio-item">
+            <input class="input__field--radio" name="rating" type="radio" id="stars1">
+            <label class="radio__label" for="stars1">1 Stars & above</label>
           </div>
-          <div class="card__footer">
-            <div class="card__footer--left">
-              <a class="card__button" href="#"><button class="button btn-solid-primary buy-button">Buy - $89.99</button></a>
-            </div>
-            <div class="card__footer--right">
-              <a><img class="icon-md icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/heart.svg" alt="heart-icon"/></a>
-              <a><img class="icon-md icon-success" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/share.svg" alt="share-icon"/></a>
-              <a><img class="icon-md icon-primary" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/menu.svg" alt="menu-icon"/></a>
-            </div>
-          </div>
-        </article>
+        </div>
+      </aside>
 
-        <article class="card card__ecommerce">
-          <div class="card__body">
-            <div class="card__badge">
-              <img class="badge__icon icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/bookmark.svg" alt="bookmark-icon"/>
-              <span class="card__discount">25% OFF</span>
-            </div>
-            <img src="../assets/tod.png" class="card__img" alt="card-image"/>
-            <div class="card__title">
-              <h1 class="h-5">Total Overdose</h1>
-              <p class="caption">Eidos Games</p>
-            </div>
-            <div class="card__content">
-              <p class="bd-5 card__price">$<strike>49.99</strike> <span class="card__content--newprice">37.99</span> /-</p>
-            </div>
-          </div>
-          <div class="card__footer">
-            <div class="card__footer--left">
-              <a class="card__button" href="#"><button class="button btn-solid-primary buy-button">Buy - $37.99</button></a>
-            </div>
-            <div class="card__footer--right">
-              <a><img class="icon-md icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/heart.svg" alt="heart-icon"/></a>
-              <a><img class="icon-md icon-success" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/share.svg" alt="share-icon"/></a>
-              <a><img class="icon-md icon-primary" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/menu.svg" alt="menu-icon"/></a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card card__ecommerce">
-          <div class="card__body">
-            <div class="card__badge">
-              <img class="badge__icon icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/bookmark.svg" alt="bookmark-icon"/>
-              <span class="card__discount">40% OFF</span>
-            </div>
-            <img src="../assets/cricket07.png" class="card__img" alt="card-image"/>
-            <div class="card__title">
-              <h1 class="h-5">Cricket 2007</h1>
-              <p class="caption">EA Sports</p>
-            </div>
-            <div class="card__content">
-              <p class="bd-5 card__price">$<strike>99.99</strike> <span class="card__content--newprice">59.99</span> /-</p>
-            </div>
-          </div>
-          <div class="card__footer">
-            <div class="card__footer--left">
-              <a class="card__button" href="#"><button class="button btn-solid-primary buy-button">Buy - $59.99</button></a>
-            </div>
-            <div class="card__footer--right">
-              <a><img class="icon-md icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/heart.svg" alt="heart-icon"/></a>
-              <a><img class="icon-md icon-success" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/share.svg" alt="share-icon"/></a>
-              <a><img class="icon-md icon-primary" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/menu.svg" alt="menu-icon"/></a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card card__ecommerce">
-          <div class="card__body">
-            <div class="card__badge">
-              <img class="badge__icon icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/bookmark.svg" alt="bookmark-icon"/>
-              <span class="card__discount">20% OFF</span>
-            </div>
-            <img src="../assets/crazytaxi.png" class="card__img" alt="card-image"/>
-            <div class="card__title">
-              <h1 class="h-5">Crazy Taxi</h1>
-              <p class="caption">Dreamcast Games</p>
-            </div>
-            <div class="card__content">
-              <p class="bd-5 card__price">$<strike>39.99</strike> <span class="card__content--newprice">31.99</span> /-</p>
-            </div>
-          </div>
-          <div class="card__footer">
-            <div class="card__footer--left">
-              <a class="card__button" href="#"><button class="button btn-solid-primary buy-button">Buy - $31.99</button></a>
-            </div>
-            <div class="card__footer--right">
-              <a><img class="icon-md icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/heart.svg" alt="heart-icon"/></a>
-              <a><img class="icon-md icon-success" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/share.svg" alt="share-icon"/></a>
-              <a><img class="icon-md icon-primary" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/menu.svg" alt="menu-icon"/></a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card card__ecommerce">
-          <div class="card__body">
-            <div class="card__badge">
-              <img class="badge__icon icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/bookmark.svg" alt="bookmark-icon"/>
-              <span class="card__discount">50% OFF</span>
-            </div>
-            <img src="../assets/nfsmw.webp" class="card__img" alt="card-image"/>
-            <div class="card__title">
-              <h1 class="h-5">NFS Most Wanted</h1>
-              <p class="caption">EA Games</p>
-            </div>
-            <div class="card__content">
-              <p class="bd-5 card__price">$<strike>99.99</strike> <span class="card__content--newprice">49.99</span> /-</p>
-            </div>
-          </div>
-          <div class="card__footer">
-            <div class="card__footer--left">
-              <a class="card__button" href="#"><button class="button btn-solid-primary buy-button">Buy - $49.99</button></a>
-            </div>
-            <div class="card__footer--right">
-              <a><img class="icon-md icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/heart.svg" alt="heart-icon"/></a>
-              <a><img class="icon-md icon-success" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/share.svg" alt="share-icon"/></a>
-              <a><img class="icon-md icon-primary" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/menu.svg" alt="menu-icon"/></a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card card__ecommerce">
-          <div class="card__body">
-            <div class="card__badge">
-              <img class="badge__icon icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/bookmark.svg" alt="bookmark-icon"/>
-              <span class="card__discount">30% OFF</span>
-            </div>
-            <img src="../assets/roadrash.webp" class="card__img" alt="card-image"/>
-            <div class="card__title">
-              <h1 class="h-5">Roadrash</h1>
-              <p class="caption">EA Games</p>
-            </div>
-            <div class="card__content">
-              <p class="bd-5 card__price">$<strike>49.99</strike> <span class="card__content--newprice">34.99</span> /-</p>
-            </div>
-          </div>
-          <div class="card__footer">
-            <div class="card__footer--left">
-              <a class="card__button" href="#"><button class="button btn-solid-primary buy-button">Buy - $34.99</button></a>
-            </div>
-            <div class="card__footer--right">
-              <a><img class="icon-md icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/heart.svg" alt="heart-icon"/></a>
-              <a><img class="icon-md icon-success" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/share.svg" alt="share-icon"/></a>
-              <a><img class="icon-md icon-primary" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/menu.svg" alt="menu-icon"/></a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card card__ecommerce">
-          <div class="card__body">
-            <div class="card__badge">
-              <img class="badge__icon icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/bookmark.svg" alt="bookmark-icon"/>
-              <span class="card__discount">10% OFF</span>
-            </div>
-            <img src="../assets/fifa07.jpg" class="card__img" alt="card-image"/>
-            <div class="card__title">
-              <h1 class="h-5">Fifa 07</h1>
-              <p class="caption">EA Sports</p>
-            </div>
-            <div class="card__content">
-              <p class="bd-5 card__price">$<strike>99.99</strike> <span class="card__content--newprice">89.99</span> /-</p>
-            </div>
-          </div>
-          <div class="card__footer">
-            <div class="card__footer--left">
-              <a class="card__button" href="#"><button class="button btn-solid-primary buy-button">Buy - $89.99</button></a>
-            </div>
-            <div class="card__footer--right">
-              <a><img class="icon-md icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/heart.svg" alt="heart-icon"/></a>
-              <a><img class="icon-md icon-success" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/share.svg" alt="share-icon"/></a>
-              <a><img class="icon-md icon-primary" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/menu.svg" alt="menu-icon"/></a>
-            </div>
-          </div>
-        </article>
-
-        <article class="card card__ecommerce">
-          <div class="card__body">
-            <div class="card__badge">
-              <img class="badge__icon icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/bookmark.svg" alt="bookmark-icon"/>
-              <span class="card__discount">25% OFF</span>
-            </div>
-            <img src="../assets/tod.png" class="card__img" alt="card-image"/>
-            <div class="card__title">
-              <h1 class="h-5">Total Overdose</h1>
-              <p class="caption">Eidos Games</p>
-            </div>
-            <div class="card__content">
-              <p class="bd-5 card__price">$<strike>49.99</strike> <span class="card__content--newprice">37.99</span> /-</p>
-            </div>
-          </div>
-          <div class="card__footer">
-            <div class="card__footer--left">
-              <a class="card__button" href="#"><button class="button btn-solid-primary buy-button">Buy - $37.99</button></a>
-            </div>
-            <div class="card__footer--right">
-              <a><img class="icon-md icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/heart.svg" alt="heart-icon"/></a>
-              <a><img class="icon-md icon-success" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/share.svg" alt="share-icon"/></a>
-              <a><img class="icon-md icon-primary" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/menu.svg" alt="menu-icon"/></a>
-            </div>
-          </div>
-        </article>
-      </section>
-      
       <!-------------------------------------
-                    FOOTER 
+                    MAIN 
       -------------------------------------->
-    </main>
-    
+      <main class="main">
+        <!-------------------------------------
+                    MAIN PRODUCTS 
+        -------------------------------------->
+        <div class="products__heading">
+          <h5 class="h-5">Featured Games</h5>
+          <p class="cp">(Showing all Games)</p>
+        </div>
+        <section class="main-products card-small">
+          <article class="card card__ecommerce">
+            <div class="card__body">
+              <div class="card__badge">
+                <img class="badge__icon icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/bookmark.svg" alt="bookmark-icon"/>
+                <span class="card__discount">40% OFF</span>
+              </div>
+              <img src="../assets/cricket07.png" class="card__img" alt="card-image"/>
+              <div class="card__title">
+                <h1 class="h-5">Cricket 2007</h1>
+                <p class="caption">EA Sports</p>
+              </div>
+              <div class="card__content">
+                <p class="bd-5 card__price">$<strike>99.99</strike> <span class="card__content--newprice">59.99</span> /-</p>
+              </div>
+            </div>
+            <div class="card__footer">
+              <div class="card__footer--left">
+                <a class="card__button" href="#"><button class="button btn-solid-primary buy-button">Buy - $59.99</button></a>
+              </div>
+              <div class="card__footer--right">
+                <a><img class="icon-md icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/heart.svg" alt="heart-icon"/></a>
+                <a><img class="icon-md icon-success" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/share.svg" alt="share-icon"/></a>
+                <a><img class="icon-md icon-primary" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/menu.svg" alt="menu-icon"/></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card card__ecommerce">
+            <div class="card__body">
+              <div class="card__badge">
+                <img class="badge__icon icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/bookmark.svg" alt="bookmark-icon"/>
+                <span class="card__discount">20% OFF</span>
+              </div>
+              <img src="../assets/crazytaxi.png" class="card__img" alt="card-image"/>
+              <div class="card__title">
+                <h1 class="h-5">Crazy Taxi</h1>
+                <p class="caption">Dreamcast Games</p>
+              </div>
+              <div class="card__content">
+                <p class="bd-5 card__price">$<strike>39.99</strike> <span class="card__content--newprice">31.99</span> /-</p>
+              </div>
+            </div>
+            <div class="card__footer">
+              <div class="card__footer--left">
+                <a class="card__button" href="#"><button class="button btn-solid-primary buy-button">Buy - $31.99</button></a>
+              </div>
+              <div class="card__footer--right">
+                <a><img class="icon-md icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/heart.svg" alt="heart-icon"/></a>
+                <a><img class="icon-md icon-success" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/share.svg" alt="share-icon"/></a>
+                <a><img class="icon-md icon-primary" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/menu.svg" alt="menu-icon"/></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card card__ecommerce">
+            <div class="card__body">
+              <div class="card__badge">
+                <img class="badge__icon icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/bookmark.svg" alt="bookmark-icon"/>
+                <span class="card__discount">50% OFF</span>
+              </div>
+              <img src="../assets/nfsmw.webp" class="card__img" alt="card-image"/>
+              <div class="card__title">
+                <h1 class="h-5">NFS Most Wanted</h1>
+                <p class="caption">EA Games</p>
+              </div>
+              <div class="card__content">
+                <p class="bd-5 card__price">$<strike>99.99</strike> <span class="card__content--newprice">49.99</span> /-</p>
+              </div>
+            </div>
+            <div class="card__footer">
+              <div class="card__footer--left">
+                <a class="card__button" href="#"><button class="button btn-solid-primary buy-button">Buy - $49.99</button></a>
+              </div>
+              <div class="card__footer--right">
+                <a><img class="icon-md icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/heart.svg" alt="heart-icon"/></a>
+                <a><img class="icon-md icon-success" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/share.svg" alt="share-icon"/></a>
+                <a><img class="icon-md icon-primary" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/menu.svg" alt="menu-icon"/></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card card__ecommerce">
+            <div class="card__body">
+              <div class="card__badge">
+                <img class="badge__icon icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/bookmark.svg" alt="bookmark-icon"/>
+                <span class="card__discount">30% OFF</span>
+              </div>
+              <img src="../assets/roadrash.webp" class="card__img" alt="card-image"/>
+              <div class="card__title">
+                <h1 class="h-5">Roadrash</h1>
+                <p class="caption">EA Games</p>
+              </div>
+              <div class="card__content">
+                <p class="bd-5 card__price">$<strike>49.99</strike> <span class="card__content--newprice">34.99</span> /-</p>
+              </div>
+            </div>
+            <div class="card__footer">
+              <div class="card__footer--left">
+                <a class="card__button" href="#"><button class="button btn-solid-primary buy-button">Buy - $34.99</button></a>
+              </div>
+              <div class="card__footer--right">
+                <a><img class="icon-md icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/heart.svg" alt="heart-icon"/></a>
+                <a><img class="icon-md icon-success" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/share.svg" alt="share-icon"/></a>
+                <a><img class="icon-md icon-primary" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/menu.svg" alt="menu-icon"/></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card card__ecommerce">
+            <div class="card__body">
+              <div class="card__badge">
+                <img class="badge__icon icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/bookmark.svg" alt="bookmark-icon"/>
+                <span class="card__discount">10% OFF</span>
+              </div>
+              <img src="../assets/fifa07.jpg" class="card__img" alt="card-image"/>
+              <div class="card__title">
+                <h1 class="h-5">Fifa 07</h1>
+                <p class="caption">EA Sports</p>
+              </div>
+              <div class="card__content">
+                <p class="bd-5 card__price">$<strike>99.99</strike> <span class="card__content--newprice">89.99</span> /-</p>
+              </div>
+            </div>
+            <div class="card__footer">
+              <div class="card__footer--left">
+                <a class="card__button" href="#"><button class="button btn-solid-primary buy-button">Buy - $89.99</button></a>
+              </div>
+              <div class="card__footer--right">
+                <a><img class="icon-md icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/heart.svg" alt="heart-icon"/></a>
+                <a><img class="icon-md icon-success" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/share.svg" alt="share-icon"/></a>
+                <a><img class="icon-md icon-primary" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/menu.svg" alt="menu-icon"/></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card card__ecommerce">
+            <div class="card__body">
+              <div class="card__badge">
+                <img class="badge__icon icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/bookmark.svg" alt="bookmark-icon"/>
+                <span class="card__discount">25% OFF</span>
+              </div>
+              <img src="../assets/tod.png" class="card__img" alt="card-image"/>
+              <div class="card__title">
+                <h1 class="h-5">Total Overdose</h1>
+                <p class="caption">Eidos Games</p>
+              </div>
+              <div class="card__content">
+                <p class="bd-5 card__price">$<strike>49.99</strike> <span class="card__content--newprice">37.99</span> /-</p>
+              </div>
+            </div>
+            <div class="card__footer">
+              <div class="card__footer--left">
+                <a class="card__button" href="#"><button class="button btn-solid-primary buy-button">Buy - $37.99</button></a>
+              </div>
+              <div class="card__footer--right">
+                <a><img class="icon-md icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/heart.svg" alt="heart-icon"/></a>
+                <a><img class="icon-md icon-success" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/share.svg" alt="share-icon"/></a>
+                <a><img class="icon-md icon-primary" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/menu.svg" alt="menu-icon"/></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card card__ecommerce">
+            <div class="card__body">
+              <div class="card__badge">
+                <img class="badge__icon icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/bookmark.svg" alt="bookmark-icon"/>
+                <span class="card__discount">40% OFF</span>
+              </div>
+              <img src="../assets/cricket07.png" class="card__img" alt="card-image"/>
+              <div class="card__title">
+                <h1 class="h-5">Cricket 2007</h1>
+                <p class="caption">EA Sports</p>
+              </div>
+              <div class="card__content">
+                <p class="bd-5 card__price">$<strike>99.99</strike> <span class="card__content--newprice">59.99</span> /-</p>
+              </div>
+            </div>
+            <div class="card__footer">
+              <div class="card__footer--left">
+                <a class="card__button" href="#"><button class="button btn-solid-primary buy-button">Buy - $59.99</button></a>
+              </div>
+              <div class="card__footer--right">
+                <a><img class="icon-md icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/heart.svg" alt="heart-icon"/></a>
+                <a><img class="icon-md icon-success" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/share.svg" alt="share-icon"/></a>
+                <a><img class="icon-md icon-primary" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/menu.svg" alt="menu-icon"/></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card card__ecommerce">
+            <div class="card__body">
+              <div class="card__badge">
+                <img class="badge__icon icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/bookmark.svg" alt="bookmark-icon"/>
+                <span class="card__discount">20% OFF</span>
+              </div>
+              <img src="../assets/crazytaxi.png" class="card__img" alt="card-image"/>
+              <div class="card__title">
+                <h1 class="h-5">Crazy Taxi</h1>
+                <p class="caption">Dreamcast Games</p>
+              </div>
+              <div class="card__content">
+                <p class="bd-5 card__price">$<strike>39.99</strike> <span class="card__content--newprice">31.99</span> /-</p>
+              </div>
+            </div>
+            <div class="card__footer">
+              <div class="card__footer--left">
+                <a class="card__button" href="#"><button class="button btn-solid-primary buy-button">Buy - $31.99</button></a>
+              </div>
+              <div class="card__footer--right">
+                <a><img class="icon-md icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/heart.svg" alt="heart-icon"/></a>
+                <a><img class="icon-md icon-success" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/share.svg" alt="share-icon"/></a>
+                <a><img class="icon-md icon-primary" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/menu.svg" alt="menu-icon"/></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card card__ecommerce">
+            <div class="card__body">
+              <div class="card__badge">
+                <img class="badge__icon icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/bookmark.svg" alt="bookmark-icon"/>
+                <span class="card__discount">50% OFF</span>
+              </div>
+              <img src="../assets/nfsmw.webp" class="card__img" alt="card-image"/>
+              <div class="card__title">
+                <h1 class="h-5">NFS Most Wanted</h1>
+                <p class="caption">EA Games</p>
+              </div>
+              <div class="card__content">
+                <p class="bd-5 card__price">$<strike>99.99</strike> <span class="card__content--newprice">49.99</span> /-</p>
+              </div>
+            </div>
+            <div class="card__footer">
+              <div class="card__footer--left">
+                <a class="card__button" href="#"><button class="button btn-solid-primary buy-button">Buy - $49.99</button></a>
+              </div>
+              <div class="card__footer--right">
+                <a><img class="icon-md icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/heart.svg" alt="heart-icon"/></a>
+                <a><img class="icon-md icon-success" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/share.svg" alt="share-icon"/></a>
+                <a><img class="icon-md icon-primary" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/menu.svg" alt="menu-icon"/></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card card__ecommerce">
+            <div class="card__body">
+              <div class="card__badge">
+                <img class="badge__icon icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/bookmark.svg" alt="bookmark-icon"/>
+                <span class="card__discount">30% OFF</span>
+              </div>
+              <img src="../assets/roadrash.webp" class="card__img" alt="card-image"/>
+              <div class="card__title">
+                <h1 class="h-5">Roadrash</h1>
+                <p class="caption">EA Games</p>
+              </div>
+              <div class="card__content">
+                <p class="bd-5 card__price">$<strike>49.99</strike> <span class="card__content--newprice">34.99</span> /-</p>
+              </div>
+            </div>
+            <div class="card__footer">
+              <div class="card__footer--left">
+                <a class="card__button" href="#"><button class="button btn-solid-primary buy-button">Buy - $34.99</button></a>
+              </div>
+              <div class="card__footer--right">
+                <a><img class="icon-md icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/heart.svg" alt="heart-icon"/></a>
+                <a><img class="icon-md icon-success" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/share.svg" alt="share-icon"/></a>
+                <a><img class="icon-md icon-primary" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/menu.svg" alt="menu-icon"/></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card card__ecommerce">
+            <div class="card__body">
+              <div class="card__badge">
+                <img class="badge__icon icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/bookmark.svg" alt="bookmark-icon"/>
+                <span class="card__discount">10% OFF</span>
+              </div>
+              <img src="../assets/fifa07.jpg" class="card__img" alt="card-image"/>
+              <div class="card__title">
+                <h1 class="h-5">Fifa 07</h1>
+                <p class="caption">EA Sports</p>
+              </div>
+              <div class="card__content">
+                <p class="bd-5 card__price">$<strike>99.99</strike> <span class="card__content--newprice">89.99</span> /-</p>
+              </div>
+            </div>
+            <div class="card__footer">
+              <div class="card__footer--left">
+                <a class="card__button" href="#"><button class="button btn-solid-primary buy-button">Buy - $89.99</button></a>
+              </div>
+              <div class="card__footer--right">
+                <a><img class="icon-md icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/heart.svg" alt="heart-icon"/></a>
+                <a><img class="icon-md icon-success" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/share.svg" alt="share-icon"/></a>
+                <a><img class="icon-md icon-primary" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/menu.svg" alt="menu-icon"/></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card card__ecommerce">
+            <div class="card__body">
+              <div class="card__badge">
+                <img class="badge__icon icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/bookmark.svg" alt="bookmark-icon"/>
+                <span class="card__discount">25% OFF</span>
+              </div>
+              <img src="../assets/tod.png" class="card__img" alt="card-image"/>
+              <div class="card__title">
+                <h1 class="h-5">Total Overdose</h1>
+                <p class="caption">Eidos Games</p>
+              </div>
+              <div class="card__content">
+                <p class="bd-5 card__price">$<strike>49.99</strike> <span class="card__content--newprice">37.99</span> /-</p>
+              </div>
+            </div>
+            <div class="card__footer">
+              <div class="card__footer--left">
+                <a class="card__button" href="#"><button class="button btn-solid-primary buy-button">Buy - $37.99</button></a>
+              </div>
+              <div class="card__footer--right">
+                <a><img class="icon-md icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/heart.svg" alt="heart-icon"/></a>
+                <a><img class="icon-md icon-success" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/share.svg" alt="share-icon"/></a>
+                <a><img class="icon-md icon-primary" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/menu.svg" alt="menu-icon"/></a>
+              </div>
+            </div>
+          </article>
+        </section>
+        
+        <!-------------------------------------
+                      FOOTER 
+        -------------------------------------->
+      </main>
+    </section>
+
+    <nav class="filter-btn-wrapper txt-center">
+      <button class="button filter-btn" id="filter-btn">Add Filters</button>
+    </nav>
+
+    <!-------------------------------------
+                    FOOTER
+    -------------------------------------->
     <footer class="footer">
       <section class="txt-center footer-content">
         <article class="footer-left">
@@ -755,6 +767,8 @@
         . All Rights Reserved
       </p>
     </footer>
+    
+    <div class="sidebar-backdrop" id="sidebar-backdrop"></div>
   </body>
   <script src="../scripts/script.js" defer></script>
 </html>
