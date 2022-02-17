@@ -10,7 +10,7 @@
 .wishlist-items {
   margin-top: var(--space-xl);
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   justify-content: center;
   gap: var(--space-md);
 }
@@ -36,4 +36,11 @@
 
 .wishlist-page__breadcrumb {
   height: 40px;
+}
+
+@media screen and (max-width: 480px) {
+  div.header__item:nth-child(5) {
+    order: 1;
+    margin-left: auto;
+  }  
 }
