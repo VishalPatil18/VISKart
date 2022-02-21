@@ -128,12 +128,16 @@ themeSwitcherBtn.addEventListener("click", () => {
   }
 });
 
-sharelinkModalBtn.addEventListener("click", () => {
-  sharelinkModalContainer.style.display = "flex";
-  sharelinkModalEl.style.display = "flex";
-});
+if(sharelinkModalBtn) {
+  sharelinkModalBtn.addEventListener("click", () => {
+    sharelinkModalContainer.style.display = "flex";
+    sharelinkModalEl.style.display = "flex";
+  });
+}
 
-sharelinkModalCloseBtn.addEventListener("click", () => {
-  sharelinkModalContainer.style.display = "none";
-  sharelinkModalEl.style.display = "none";
-})
+if(sharelinkModalCloseBtn) {
+  sharelinkModalCloseBtn.addEventListener("click", () => {
+    sharelinkModalContainer.style.display = "none";
+    sharelinkModalEl.style.display = "none";
+  })
+}

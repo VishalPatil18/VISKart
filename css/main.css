@@ -233,6 +233,7 @@ body {
   position: sticky;
   top: 125px;
   width: 320px;
+  background-color: var(--secondary-theme-background);
 }
 
 .sidebar-title {
@@ -449,6 +450,10 @@ body {
   color: white;
 }
 
+.card__ecommerce .card__footer{
+  background-color: var(--secondary-theme-background);
+}
+
 /*
 ***************** FOOTER *****************
 */
@@ -577,7 +582,6 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: white;
     z-index: 12;
   }
 
