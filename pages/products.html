@@ -25,17 +25,17 @@
                   NAVBAR 
     -------------------------------------->
     <header class="header">
-      <div class="header__item header-item__logo">
+      <div class="header__item header-logo">
         <img class="logo" src="../assets/logo.svg" alt="logo" />
-        <a href="../index.html" class="h-4">
+        <a href="../index.html" class="h-4 brandname">
           <span class="primary-font">VIS</span>KART
         </a>
       </div>
       <div class="header__item header-button__wrapper">
-        <a class="button btn-solid-primary" href="./products.html">
+        <a class="button btn-solid-primary" href="../pages/products.html">
           Featured
         </a>
-        <a class="button btn-plain btn-primary" href="./products.html">
+        <a class="button btn-plain btn-primary" href="../pages/products.html">
           Top
         </a>
       </div>
@@ -50,7 +50,7 @@
       </div>
       <div class="header__item header-menu__wrapper">
         <ul class="header-menu__list">
-          <a href="./cart.html">
+          <a href="../pages/cart.html">
             <li class="txt-center header-menu__item">
               <img
                 class="icon-md icon-dark"
@@ -59,7 +59,7 @@
               />
             </li>
           </a>
-          <a href="./wishlist.html">
+          <a href="../pages/wishlist.html">
             <li class="txt-center header-menu__item">
               <img
                 class="icon-md icon-dark"
@@ -87,10 +87,24 @@
               />
             </li>
           </a>
+
+          <button class="header-menu__item btn-login" id="login-btn">
+            <img
+              class="icon-md icon-dark"
+              src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/user.svg"
+              alt="login"
+            />
+          </button>
+
+          <button class="button btn-plain-icon theme-switcher" id="theme-switcher-btn">
+            <img
+              class="icon-dark"
+              src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/moon.svg"
+              alt="dark-light-icon"
+              id="theme-icon"
+            />
+          </button>
         </ul>
-      </div>
-      <div class="header__item">
-        <button class="button btn-plain btn-login" id="login-btn">Login</button>
       </div>
 
       <div class="modal__container" id="login-container">
@@ -237,10 +251,14 @@
           <a class="breadcrumb__link" href="../index.html">Home</a>
         </li>
         <li class="breadcrumb__item">
-          <img class="icon-md icon-grey breadcrumb-icon" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/angle-up.svg" alt="arrow">
+          <img
+            class="icon-md icon-grey breadcrumb-icon"
+            src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/angle-up.svg"
+            alt="arrow"
+          />
         </li>
         <li class="breadcrumb__item active">
-          <a class="breadcrumb__link" href="./products.html">Products</a>
+          <a class="breadcrumb__link" href="./cart.html">Products</a>
         </li>
       </ul>
     </nav>

@@ -13,6 +13,47 @@ const filterBtn = document.getElementById("filter-btn");
 const filterSidebar = document.getElementById("filter-sidebar");
 const sidebarCloseBtn = document.getElementById("sidebar-close-btn");
 
+const themeSwitcherBtn = document.getElementById("theme-switcher-btn");
+const darkIcons = document.querySelectorAll(".icon-dark");
+const themeIcon = document.getElementById("theme-icon");
+
+let storageValue = localStorage.getItem("theme");
+
+
+const lightMode = () => {
+  localStorage.setItem("theme","light_mode");
+  themeIcon.src =
+    "https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/moon.svg";
+  document.body.classList.remove("dark-mode");
+  themeIcon.classList.remove("icon-dark");
+  themeIcon.classList.add("icon-light");
+
+  darkIcons.forEach(function (currentIcon) {
+    currentIcon.classList.remove("icon-light");
+    currentIcon.classList.add("icon-dark");
+  });
+};
+
+const darkMode = () => {
+  localStorage.setItem("theme","dark_mode");
+  themeIcon.src =
+    "https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/sun.svg";
+  document.body.classList.add("dark-mode");
+  themeIcon.classList.add("icon-dark");
+  themeIcon.classList.remove("icon-warning");
+
+  darkIcons.forEach(function (currentIcon) {
+    currentIcon.classList.remove("icon-dark");
+    currentIcon.classList.add("icon-light");
+  });
+};
+
+if (storageValue === null) {
+  localStorage.setItem("theme", "light_mode");
+} else if (storageValue === "dark_mode") {
+  darkMode();
+}
+
 const hideEl = (element, elementContainer) => {
   elementContainer.style.display = "none";
   element.style.display = "none";
@@ -23,38 +64,61 @@ const showEl = (element, elementContainer) => {
   element.style.display = "flex";
 };
 
-loginBtn.addEventListener("click", () => {
-  hideEl(signupEl, signupContainer);
-  showEl(loginEl, loginContainer);
-});
+if(loginBtn) {
+  loginBtn.addEventListener("click", () => {
+    hideEl(signupEl, signupContainer);
+    showEl(loginEl, loginContainer);
+  });
+}
 
-loginCloseBtn.addEventListener("click", () => hideEl(loginEl, loginContainer));
+if(loginCloseBtn) {
+  loginCloseBtn.addEventListener("click", () => hideEl(loginEl, loginContainer));
+}
 
-loginSignupPageBtn.addEventListener("click", () => {
-  hideEl(signupEl, signupContainer);
-  showEl(loginEl, loginContainer);
-});
+if(loginSignupPageBtn) {
+  loginSignupPageBtn.addEventListener("click", () => {
+    hideEl(signupEl, signupContainer);
+    showEl(loginEl, loginContainer);
+  });
+}
 
-signupBtn.addEventListener("click", () => {
-  hideEl(loginEl, loginContainer);
-  showEl(signupEl, signupContainer);
-});
+if(signupBtn) {
+  signupBtn.addEventListener("click", () => {
+    hideEl(loginEl, loginContainer);
+    showEl(signupEl, signupContainer);
+  });
+}
 
-signupCloseBtn.addEventListener("click", () => hideEl(signupEl, signupContainer));
+if(signupCloseBtn) {
+  signupCloseBtn.addEventListener("click", () => hideEl(signupEl, signupContainer));
+}
 
-filterBtn.addEventListener("click", () => {
-  filterSidebar.style.display = "flex";
-  sidebarBackdrop.style.display = "initial"
-});
+if(filterBtn) {
+  filterBtn.addEventListener("click", () => {
+    filterSidebar.style.display = "flex";
+    sidebarBackdrop.style.display = "initial"
+  });
+}
 
-sidebarCloseBtn.addEventListener("click", () => {
-  filterSidebar.style.display = "none";
-  sidebarBackdrop.style.display = "none";
-})
+if(sidebarCloseBtn) {
+  sidebarCloseBtn.addEventListener("click", () => {
+    filterSidebar.style.display = "none";
+    sidebarBackdrop.style.display = "none";
+  })
+}
 
 window.addEventListener("click", e => {
   if (e.target == sidebarBackdrop) {
     filterSidebar.style.display = "none";
     sidebarBackdrop.style.display = "none";
+  }
+});
+
+themeSwitcherBtn.addEventListener("click", () => {
+  storageValue = localStorage.getItem("theme");
+  if (storageValue === "light_mode") {
+    darkMode();
+  } else if(storageValue === "dark_mode") {
+    lightMode();
   }
 });

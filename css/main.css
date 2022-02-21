@@ -1,6 +1,13 @@
 /*
 ***************** GLOBAL STYLING *****************
 */
+
+:root {
+  --primary-theme-color: #001219;
+	--secondary-theme-color: white;
+  --secondary-theme-background: white;
+}
+
 html {
   color: var(--dark);
   font-family: "Poppins", sans-serif;
@@ -13,6 +20,14 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: var(--secondary-theme-color);
+  color: var(--primary-theme-color);
+}
+
+.dark-mode {
+	--primary-theme-color: white;
+	--secondary-theme-color: #001219;
+  --secondary-theme-background: var(--dark);
 }
 
 /*
@@ -23,12 +38,14 @@ body {
   align-items: center;
   gap: var(--space-md);
   padding: var(--space-sm) 10%;
-  background-color: white;
+  background-color: var(--secondary-theme-background);
+  color: var(--primary-theme-color);
   position: sticky;
   top: 0;
   left: 0;
   right: 0;
   z-index: 5;
+  width: 100%;
 }
 
 .header__item {
@@ -47,6 +64,10 @@ body {
 .logo {
   width: 5rem;
   height: 5rem;
+}
+
+.brandname {
+  color: var(--primary-theme-color)
 }
 
 .primary-font {
@@ -88,6 +109,7 @@ body {
   align-items: center;
   flex-shrink: 0;
   margin: 0;
+  padding-left: 0;
 }
 
 .header-menu__item {
@@ -100,6 +122,15 @@ body {
 
 .header-menu__item:hover {
   background-color: var(--light);
+}
+
+.dark-mode .header-menu__item:hover {
+  background-color: var(--secondary-theme-color);
+}
+
+.btn-login {
+  border: none;
+  background-color: initial;
 }
 
 .btn-login:hover {
@@ -129,18 +160,29 @@ body {
   background-color: var(--light);
 }
 
+.theme-switcher {
+  padding: 0;
+  margin-left: var(--space-xs);
+}
+
+.theme-switcher:hover {
+  background-color: initial;
+  transform: rotate(360deg);
+  transition: 0.3s ease-in-out;
+}
+
+.theme-switcher > img {
+  height: 20px;
+  width: 20px;
+}
+
+
 /*
 ***************** BREADCRUMB *****************
 */
 .breadcrumb {
-  position: fixed;
-  top: 10px;
-  left: 0;
-  padding: var(--space-xxs);
-  z-index: 1;
-  margin: 0;
-  right: 0;
-  background-color: white;
+  padding: 0 10%;
+  width: 100%;
 }
 
 .breadcrumb__list {
@@ -150,7 +192,6 @@ body {
   background-color: var(--light);
   height: 100%;
   align-items: center;
-  margin: 70px 10% 0;
   padding: var(--space-xs);
   border-radius: var(--br-md);
 }
@@ -188,7 +229,7 @@ body {
   overflow-y: scroll;
   padding: var(--space-lg);
   position: sticky;
-  top: 0;
+  top: 125px;
   width: 320px;
 }
 
@@ -313,6 +354,10 @@ body {
   margin-left: var(--space-sm);
 }
 
+.top-item__disc .st-1 {
+  color: var(--dark);
+}
+
 .top-item__button {
   margin-left: auto;
 }
@@ -337,6 +382,10 @@ body {
   align-items: center;
   text-align: center;
   flex-shrink: 0;
+}
+
+.new-item__disc .st-2 {
+  color: var(--dark);
 }
 
 .new-item__image {
@@ -391,6 +440,11 @@ body {
   background-color: black;
   color: white;
   padding: var(--space-sm)
+}
+
+.dark-mode .btn-primary:hover {
+  background-color: var(--primary);
+  color: white;
 }
 
 /*
@@ -479,8 +533,8 @@ body {
     padding: var(--space-sm) 5%;
   }
 
-  .breadcrumb__list {
-    margin: 70px 4% 0;
+  .breadcrumb {
+    padding: 0 5%;
   }
 }
 
@@ -495,35 +549,25 @@ body {
     gap: var(--space-xxs);
   }
 
-  #login-btn {
-    order: 1;
-  }
-
-  div.header__item:nth-child(5) {
-    order: 1;
-    margin-left: auto;
-  }
-
-  div.header__item:nth-child(3) {
-    order: 2;
+  .header-item__search {
     margin-left: 0;
     width: 220px;
   }
 
-  div.header__item:nth-child(4) {
-    order: 2;
+  .header-button__wrapper {
+    display: none;
   }
 
   .header-menu__list {
     padding: 0;
   }
 
-  .footer {
-    padding: var(--space-xl) var(--space-xl) var(--space-xs)
+  .breadcrumb {
+    padding: 0 var(--space-xs);
   }
 
-  .breadcrumb__list {
-    margin: 110px 1% 0;
+  .footer {
+    padding: var(--space-xl) var(--space-xl) var(--space-xs)
   }
 
   .sidebar {
@@ -543,6 +587,11 @@ body {
 @media screen and (max-width: 680px) {
   :root {
     font-size: 56%;
+  }
+
+  .header-item__search {
+    order: 4;
+    width: 100%;
   }
 
   .top-products {
@@ -576,20 +625,8 @@ body {
   }
 
   div.header__item:nth-child(3) {
-    order: 4;
     margin-left: 0;
     width: 100%;
-  }
-
-  div.header__item:nth-child(2) {
-    display: none;
-  }
-
-  div.header__item:nth-child(4) {
-    order: 1;
-  }
-  div.header__item:nth-child(5) {
-    margin: 0;
   }
 
   .header-menu__item {
@@ -615,10 +652,6 @@ body {
     border-radius: 0;
     border-bottom-right-radius: var(--br-xl);
     border-bottom-left-radius: var(--br-xl);
-  }
-
-  .breadcrumb__list {
-    margin: 90px 1% 0;
   }
 }
 

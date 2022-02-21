@@ -13,6 +13,10 @@
   justify-content: center;
 }
 
+.products__heading {
+  margin-top: 0;
+}
+
 .products-and-price {
   display: flex;
   gap: var(--space-md);
@@ -29,6 +33,10 @@
   gap: var(--space-md);
 }
 
+.dark-mode .products-and-price .my-products {
+  background-color: var(--secondary-theme-background);
+}
+
 .products-and-price .price-details {
   flex: 1.25;
   border-radius: var(--br-xl);
@@ -39,6 +47,8 @@
 .price-details .card {
   width: 100%;
   border-radius: var(--br-xl);
+  background-color: var(--secondary-theme-background);
+  color: var(--primary-theme-color);
 }
 
 .price-details .card .card__content {
@@ -110,6 +120,7 @@
   padding: var(--space-sm);
   flex-direction: column;
   gap: var(--space-sm);
+  color: var(--dark);
 }
 
 .horizontal-card .card__content--newprice {
