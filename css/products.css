@@ -88,3 +88,45 @@
 .card-small .card__footer--right > a:hover {
   background-color: white;
 }
+
+.pagination-wrapper {
+  margin-top: var(--space-xl);
+}
+
+.pagination {
+  list-style: none;
+  display: flex;
+  margin: auto;
+  gap: var(--space-xs);
+  align-items: center;
+  font-size: var(--fs-xs-2);
+  justify-content: center;
+}
+
+.left-slider > img {
+  transform: rotate(-90deg);
+  cursor: pointer;
+}
+
+.right-slider > img {
+  transform: rotate(90deg);
+  cursor: pointer;
+}
+
+.page-no {
+  padding: 1rem;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  background-color: var(--secondary-theme-background);
+  border-radius: var(--br-sm);
+}
+
+.page-no:hover {
+  background-color: var(--primary);
+  transition: 0.2s ease-in;
+}
+
+.pagination .active {
+  background-color: var(--primary);
+}
