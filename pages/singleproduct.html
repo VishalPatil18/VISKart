@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cricket07 / VISKart</title>
+
+    <!-- VENDORS STYLESHEET -->
+    <link
+      rel="stylesheet"
+      href="https://vispaui-postdev-deploy.netlify.app/css/main.css"
+    />
+
+    <!-- MAIN STYLESHEET -->
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/singleproduct.css" />
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="../assets/logo.svg" />
+  </head>
+  <body class="wishlist-page">
+    <!-------------------------------------
+                  NAVBAR 
+    -------------------------------------->
+    <header class="header">
+      <div class="header__item header-logo">
+        <img class="logo" src="../assets/logo.svg" alt="logo" />
+        <a href="../index.html" class="h-4 brandname">
+          <span class="primary-font">VIS</span>KART
+        </a>
+      </div>
+      <div class="header__item header-button__wrapper">
+        <a class="button btn-solid-primary" href="../pages/products.html">
+          Featured
+        </a>
+        <a class="button btn-plain btn-primary" href="../pages/products.html">
+          Top
+        </a>
+      </div>
+      <div class="header__item header-item__search">
+        <div class="input input__icons">
+          <input
+            class="input__field--text search"
+            type="text"
+            placeholder="Search..."
+          />
+        </div>
+      </div>
+      <div class="header__item header-menu__wrapper">
+        <ul class="header-menu__list">
+          <a href="../pages/cart.html">
+            <li class="txt-center header-menu__item">
+              <img
+                class="icon-md icon-dark"
+                src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/shopping-cart.svg"
+                alt="cart"
+              />
+            </li>
+          </a>
+          <a href="../pages/wishlist.html">
+            <li class="txt-center header-menu__item">
+              <img
+                class="icon-md icon-dark"
+                src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/heart.svg"
+                alt="heart"
+              />
+            </li>
+          </a>
+          <a href="#">
+            <li class="txt-center header-menu__item">
+              <img
+                class="icon-md icon-dark"
+                src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/bell.svg"
+                alt="notification"
+              />
+            </li>
+          </a>
+
+          <a href="#">
+            <li class="txt-center header-menu__item">
+              <img
+                class="icon-md icon-dark"
+                src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/cog.svg"
+                alt="settings"
+              />
+            </li>
+          </a>
+
+          <button class="header-menu__item btn-login" id="login-btn">
+            <img
+              class="icon-md icon-dark"
+              src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/user.svg"
+              alt="login"
+            />
+          </button>
+
+          <button class="button btn-plain-icon theme-switcher" id="theme-switcher-btn">
+            <img
+              class="icon-dark"
+              src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/moon.svg"
+              alt="dark-light-icon"
+              id="theme-icon"
+            />
+          </button>
+        </ul>
+      </div>
+    </header>
+
+    <!-------------------------------------
+                  BREADCRUMB 
+    -------------------------------------->
+    <nav class="breadcrumb wishlist-page__breadcrumb">
+      <ul class="breadcrumb__list">
+        <li class="breadcrumb__item">
+          <a class="breadcrumb__link" href="../index.html">Home</a>
+        </li>
+        <li class="breadcrumb__item">
+          <img
+            class="icon-md icon-grey breadcrumb-icon"
+            src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/angle-up.svg"
+            alt="arrow"
+          />
+        </li>
+        <li class="breadcrumb__item active">
+          <a class="breadcrumb__link" href="./products.html">Products</a>
+        </li>
+        <li class="breadcrumb__item">
+          <img
+            class="icon-md icon-grey breadcrumb-icon"
+            src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/angle-up.svg"
+            alt="arrow"
+          />
+        </li>
+        <li class="breadcrumb__item active">
+          <a class="breadcrumb__link" href="./singleproduct.html">Cricket07</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-------------------------------------
+                  MAIN 
+    -------------------------------------->
+    <main class="main">
+      <!-------------------------------------
+                  SINGLE PRODUCT
+      -------------------------------------->
+      <section class="single-product-wrapper">
+        <div class="product-image-wrapper">
+          <img src="../assets/cricket07.png" class="product-image" alt="card-image"/>
+        </div>
+        <div class="product-details-wrapper">
+          <div class="product-title">
+            <h3 class="h-3">Cricket 2007</h3>
+            <p class="bd-3">EA Sports</p>
+          </div>
+          <div class="product-content">
+            <p class="bd-4 product-price">$<strike>99.99</strike> <span class="product-newprice">59.99</span> /-</p>
+          </div>
+
+          <div class="product-desc">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores dolore, delectus numquam officiis ipsam aspernatur a minus dolor ad? Odit quidem blanditiis ullam minus nobis dolor. Iusto autem suscipit hic.
+          </div>
+
+          <div class="product-buttons">
+            <button class="button btn-solid-primary buy-btn">
+              Buy - $59.99
+            </button>
+
+            <div class="other-btns">
+              <button class="button btn-plain-icon">
+                <img class="icon-md icon-danger" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/heart.svg" alt="heart-icon"/>
+              </button>
+              <button class="button btn-plain-icon">
+                <img class="icon-md icon-success" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/share.svg" alt="share-icon"/>
+              </button>
+              <button class="button btn-plain-icon">
+                <img class="icon-md icon-primary" src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/menu.svg" alt="menu-icon"/>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-------------------------------------
+                  FOOTER 
+    -------------------------------------->
+    <footer class="footer">
+      <section class="txt-center footer-content">
+        <article class="footer-left">
+          <a href="https://github.com/VishalPatil18/VISKart" class="h-5">
+            Contribute to VISKart
+          </a>
+          <p class="bd-5">
+            We are an Open Source Project. Join us to create this beautiful E-Commerce Platform and serve the community of Gamers.
+          </p>
+          <div class="footer-left__sociallinks">
+            <a
+              href="https://twitter.com/VishalPatil1810"
+              class="button btn-socialmedia btn-solid-primary"
+            >
+              <img
+                class="icon-light icon-md button__icon"
+                src="https://vispaui-postdev-deploy.netlify.app/assets/twitter.svg"
+                alt="twitter"
+              />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/vishalrameshpatil"
+              class="button btn-socialmedia btn-solid-secondary"
+            >
+              <img
+                class="icon-light icon-md button__icon"
+                src="https://vispaui-postdev-deploy.netlify.app/assets/linkedin.svg"
+                alt="linkedin"
+              />
+            </a>
+
+            <a
+              href="https://www.instagram.com/_vishal_._lahsiv_/"
+              class="button btn-socialmedia btn-solid-danger"
+            >
+              <img
+                class="icon-light icon-md button__icon"
+                src="https://vispaui-postdev-deploy.netlify.app/assets/instagram.svg"
+                alt="instagram"
+              />
+            </a>
+
+            <a
+              href="https://medium.com/@vishalpatil18"
+              class="button btn-socialmedia btn-solid-dark"
+              style="background-color: black"
+            >
+              <img
+                class="icon-light icon-md button__icon"
+                src="https://vispaui-postdev-deploy.netlify.app/assets/medium.svg"
+                alt="medium"
+              />
+            </a>
+          </div>
+        </article>
+        <article class="footer-center">
+          <a href="../index.html">Home</a>
+          <a href="./products.html">Products</a>
+          <a href="#">Featured</a>
+          <a href="#">Top</a>
+        </article>
+        <article class="footer-right">
+          <a href="./cart.html">My Cart</a>
+          <a href="./wishlist.html">Wishlist</a>
+          <a href="#">About</a>
+          <a href="#">Settings</a>
+        </article>
+      </section>
+      <p class="bd-5 footer-copyright">
+        Copyright &copy; 2022
+        <a href="https://github.com/VishalPatil18"> Vishal Patil </a>
+        . All Rights Reserved
+      </p>
+    </footer>
+  </body>
+  <!-- SCRIPT FILES -->
+  <script src="../scripts/script.js" defer></script>
+</html>

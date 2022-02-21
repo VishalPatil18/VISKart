@@ -17,6 +17,11 @@ const themeSwitcherBtn = document.getElementById("theme-switcher-btn");
 const darkIcons = document.querySelectorAll(".icon-dark");
 const themeIcon = document.getElementById("theme-icon");
 
+const sharelinkModalBtn = document.getElementById("sharelink-modal-btn");
+const sharelinkModalContainer = document.getElementById("sharelink-modal-container");
+const sharelinkModalEl = document.getElementById("sharelink-modal-el");
+const sharelinkModalCloseBtn = document.getElementById("sharelink-modal-close-btn");
+
 let storageValue = localStorage.getItem("theme");
 
 
@@ -122,3 +127,13 @@ themeSwitcherBtn.addEventListener("click", () => {
     lightMode();
   }
 });
+
+sharelinkModalBtn.addEventListener("click", () => {
+  sharelinkModalContainer.style.display = "flex";
+  sharelinkModalEl.style.display = "flex";
+});
+
+sharelinkModalCloseBtn.addEventListener("click", () => {
+  sharelinkModalContainer.style.display = "none";
+  sharelinkModalEl.style.display = "none";
+})

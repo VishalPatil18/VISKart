@@ -87,7 +87,7 @@
             </li>
           </a>
 
-          <button class="header-menu__item btn-login" id="login-btn">
+          <button class="header-menu__item btn-login">
             <img
               class="icon-md icon-dark"
               src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/user.svg"
@@ -222,6 +222,14 @@
               </div>
               <div class="price-desc">
                 <p class="cp card-caption">You will save $25 on this order</p>
+                <button class="button txt-center apply-coupons-btn">
+                  <img
+                    class="icon-md icon-success"
+                    src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/tags.svg"
+                    alt="tags"
+                  />
+                  Apply Coupons
+                </button>
               </div>
             </div>
             <a class="card__button" href="#">
@@ -229,6 +237,73 @@
                 Place Order - $129.00
               </button>
             </a>
+          </div>
+
+          <button class="button btn-solid-primary txt-center share-cart-btn" id="sharelink-modal-btn">
+            <img
+              class="icon-md icon-light"
+              src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/share-square.svg"
+              alt="share"
+            />
+            Share Cart
+          </button>
+
+          <div class="modal__container" id="sharelink-modal-container">
+            <section class="modal mdl__icons mdl-primary mdl__share" id="sharelink-modal-el">
+              <header class="modal__title">
+                <h1 class="h-5">Share Modal</h1>
+                <button 
+                  class="button btn-action btn-plain-icon modal__title--close"
+                  id="sharelink-modal-close-btn"
+                >
+                  <img 
+                    class="icon-light icon-lg button__icon" 
+                    src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/close.svg"
+                  />
+                </button>
+              </header>
+              <main class="modal__body">
+                <p class="bd-5">Share the link via</p>
+                <div class="modal__body--btn-cntr">
+                  <button class="button btn-socialmedia btn-solid-success">
+                    <img 
+                      class="icon-light icon-md button__icon"
+                      src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/whatsapp.svg"
+                      />
+                  </button>
+                  <button class="button btn-socialmedia btn-solid-secondary">
+                    <img 
+                      class="icon-light icon-md button__icon"
+                      src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/facebook.svg"
+                      />
+                  </button>
+                  <button class="button btn-socialmedia btn-solid-primary">
+                    <img 
+                      class="icon-light icon-md button__icon"
+                      src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/twitter.svg"
+                    />
+                  </button>
+                  <button class="button btn-socialmedia btn-solid-danger">
+                    <img 
+                      class="icon-light icon-md button__icon"
+                      src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/instagram.svg"
+                      />
+                  </button>
+                  <button class="button btn-socialmedia btn-solid-secondary">
+                    <img 
+                      class="icon-light icon-md button__icon"
+                      src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/linkedin.svg"
+                      />
+                  </button>
+                </div>
+              </main>
+              <footer class="modal__footer">
+                <div class="link__container">
+                  <span class="modal__footer--link">example.com/share-this-link</span>
+                  <button class="button btn-solid-primary modal__footer--btn">Copy</button>
+                </div>
+              </footer>
+            </section>
           </div>
         </aside>
       </div>
