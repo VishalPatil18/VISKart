@@ -24,17 +24,19 @@
                   NAVBAR 
     -------------------------------------->
     <header class="header">
-      <div class="header__item">
+      <div class="header__item header-logo">
         <img class="logo" src="../assets/logo.svg" alt="logo" />
-        <a href="../index.html" class="h-4">
+        <a href="../index.html" class="h-4 brandname">
           <span class="primary-font">VIS</span>KART
         </a>
       </div>
       <div class="header__item header-button__wrapper">
-        <a class="button btn-solid-primary" href="./products.html">
+        <a class="button btn-solid-primary" href="../pages/products.html">
           Featured
         </a>
-        <a class="button btn-plain btn-primary" href="./products.html"> Top </a>
+        <a class="button btn-plain btn-primary" href="../pages/products.html">
+          Top
+        </a>
       </div>
       <div class="header__item header-item__search">
         <div class="input input__icons">
@@ -47,7 +49,7 @@
       </div>
       <div class="header__item header-menu__wrapper">
         <ul class="header-menu__list">
-          <a href="./cart.html">
+          <a href="../pages/cart.html">
             <li class="txt-center header-menu__item">
               <img
                 class="icon-md icon-dark"
@@ -56,7 +58,7 @@
               />
             </li>
           </a>
-          <a href="./wishlist.html">
+          <a href="../pages/wishlist.html">
             <li class="txt-center header-menu__item">
               <img
                 class="icon-md icon-dark"
@@ -85,15 +87,22 @@
             </li>
           </a>
 
-          <a href="#">
-            <li class="txt-center header-menu__item">
-              <img
-                class="profile-icon"
-                src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/profile_dark.png"
-                alt="profile"
-              />
-            </li>
-          </a>
+          <button class="header-menu__item btn-login" id="login-btn">
+            <img
+              class="icon-md icon-dark"
+              src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/user.svg"
+              alt="login"
+            />
+          </button>
+
+          <button class="button btn-plain-icon theme-switcher" id="theme-switcher-btn">
+            <img
+              class="icon-dark"
+              src="https://raw.githubusercontent.com/VishalPatil18/VISPA-UI/main/assets/moon.svg"
+              alt="dark-light-icon"
+              id="theme-icon"
+            />
+          </button>
         </ul>
       </div>
     </header>
@@ -304,4 +313,6 @@
       </p>
     </footer>
   </body>
+  <!-- SCRIPT FILES -->
+  <script src="../scripts/script.js" defer></script>
 </html>
